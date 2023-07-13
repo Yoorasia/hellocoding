@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*function add(a,b){ //메인 루틴
+            var c = a + b; //서브 루틴
+            document.write(c+"<br>");
+        }
+        add(5,7);
+        add(10,15);
+        add(-3,-11);*/
+        function plus(a, b){ //plus 라는 함수에 변수 a, b 를 같이 넣음으로써 정의. 
+            //서브 루틴 : 부가적인 영역. 정의를 내린다거나, 변수 지정을 해준다거나 하는 초기 세팅
+            var c = a + b; //매개변수 a와 b를 더한 값을 변수박스 c에 넣는다.
+            return c; //변수박스 c의 값을, 메인 루틴에 돌려 보낸다.
+        }
+
+            var value; //value = 값이라는 영단어
+
+            //메인루틴 : 프로그램의 중심이 되는 부분(실제 도출되게끔 하는 계산 구문)
+            value = plus(5, 7); //서브루틴에 정의되었던 plus 함수를 호출하여, (5, 7) //인수.매개
+            document.write(value + "<br>");// 바로 리턴 함수에 의해 내보내진다.
+
+            value = plus(10, 15);
+            document.write(value + "<br>");
+
+            value = plus(-3, -11);
+            document.write(value + "<br>");
+    </script>
+</body>
+</html>

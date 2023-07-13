@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //원의 넓이와 둘레 구해보기 (함수이름 지정해보는 것, 매개변수 만들어보는 것을 응용) 
+    function get_area(r) { // get_area 라고 하는 함수는, 매개변수 r을 가지고 있다.
+        result = r * r * 3.14; //매개변수 r은 반지름으로 사용된다. 또한 result라고 하는 매개변수는 r*r*3.14
+        return result;
+    }
+
+    function get_length(r) {
+        result = r * 2 * 3.14;
+        return result;
+    }
+
+    var radius = 30;   // 반지름
+    var area;           // 원의 넓이
+    var length;           // 원의 둘레
+
+    area = get_area(radius);
+    length = get_length(radius);
+
+    document.write("반지름 : " + radius + "<br>");
+    document.write("원의 넓이 : " + area + "<br>");
+    document.write("원의 둘레 : " + length);
+</script>
+</body>
+</html>

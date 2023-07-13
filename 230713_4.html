@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 연습</title>
+   <!--다음은 그간 살펴본 HTML, CSS, JS를 종합하여 간단한 반응을 구현하는 예제입니다. -->
+   <style>
+body{
+    margin: 0; /*웹문서의 기본 여백 값을 없애기 위한 구문*/
+    padding: 0; /*웹문서의 기본 여백 값을 없애기 위한 구문*/
+    text-align: center;
+}
+#contents{
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(62, 14, 152);/*임의의 배경색 넣는 구문*/
+    color: rgb(89, 188, 8);
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 100vh;/*줄 간격*/
+}
+#page-btns{
+    position:fixed; /*스크롤 시 위치 고정*/
+    bottom: 50px;
+    left: 50%;
+    /*CSS의 변형 속성 중,  translate(-50%)는 x축을 기준으로 왼쪽으로 50%만큼 이동시키는 역할을 합니다.
+    position이 어딘가 부모격으로 사용되고 있을 때 사용될 수 있고,
+    가운데 정렬을 하는 데 있어 이러한 응용사례도 있으니 참고해봅시다.*/
+    transform: translate(-50%); /*x y z축으로 이동*/
+}
+.page-btn{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(139, 0, 39);
+    border-radius: 50%; /*동그란 버튼 만들기*/
+    margin-right: 5px;
+    cursor: pointer;
+    color: rgb(236, 255, 22);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+</style>
+</head>
+<body>
+    <div id='contents'></div>
+    <div id="page-btns"></div>
+    <script>
+    const pageContents = ['page1','page2','page3','page4','page5','page6','page7','page8','page9','page10'];
+    
+    const contents = document.getElementById('contents');
+    const pageBtns = document.getElementById('page-btns');
+
+    for(let i=0; i<pageContents.length; i++){
+        const btn = document.createElement('button');
+        btn.className = "page-btn";
+        btn.innerText = i + 1;
+
+        pageBtns.appendChild(btn);// append: 추가
+    }
+    contents.innerHTML = pageContents[0]
+
+    function changePage(e){
+        const target = e.target; //클릭되어진 요소를 나타내고자 공간박스변수와 매개변수를 엮습니다.
+        if(target.className === 'page-btn'){ //클릭된 요소가(= target) 클래스 이름이 page-btn일 경우가 참일때, 아래 수식을 수행합니다.
+            console.log(target);
+            const indexSelected = parseInt(target.innerText) - 1;
+            console.log(indexSelected);
+            contents.innerHTML = pageContents[indexSelected];
+        }
+    }
+
+    pageBtns.addEventListener('click', changePage);
+    
+</script>
+</body>
+</html>
