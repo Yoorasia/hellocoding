@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*h3, p = 선택자*/
+        /*color, background-color = 스타일 속성*/
+        /*blueviolet, darkcyan = 스타일 값*/
+        /*선택자 종류가 다양하게 있음*/
+        /*전체 선택자*/
+        *{
+            margin: 0 auto;
+            text-align: center;
+        }
+        /*클래스 선택자*/
+        .title{color: blueviolet; 
+               background-color: darkcyan;}
+        /*태그 선택자*/
+        p{color: rgb(169, 64, 78);
+            text-align: left;}
+        /*자손선택자 - 내 자식, 손주들*/
+        article h3{
+            color: lightcoral;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: bold;
+        }
+        /*자손선택자 - 바로 아래(직계)*/
+        article > a > h3{
+            background-color: aquamarine;
+        }
+        /*(자식 선택하는 종류의 선택자 중 1)구조 선택자*/
+        li:first-child{
+            color: darkgoldenrod;
+        }
+        li:last-child{
+            font-weight: bold;
+        }
+        /*ID 선택자*/
+        #header{
+            margin: 0 auto;
+            width: 800px;
+            background-color: crimson;
+        }
+        #wrap{
+            width: 800px;
+        }
+        #aside{
+            width: 200px; float: left;
+            background-color: deeppink;
+        }
+        #content{
+            width: 600px; float: right;
+            background-color: darkviolet;
+        }
+        .item1.item2{font-size: 2rem;}
+        .item1{color: aquamarine;}
+        .item2{background-color: rgb(84, 145, 158);}
+    </style>
+</head>
+<body>
+    <!--h3, p = "태그"-->
+    <!--href = "속성"-->
+    <!--# = "값"-->
+    <section>
+    <h3>섹션1</h3>
+    <article>
+        <a href="#"><h3 class="title">간단한 html 문서 꾸미기</h3></a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repellendus molestias accusamus rerum ex incidunt aut unde animi quasi eveniet cumque, at nisi deleniti perspiciatis ducimus maxime. Tempore, aliquam sed.</p>
+    </article>
+    <ul>
+        <li>환경 오염의 주범 : 플라스틱</li>
+        <li>지구 온도 1.5도의 위협</li>
+        <li>해양 생명체 구조가 시급</li>
+    </ul>
+    </section>
+    <div id="header">
+            <h1>#header 영역</h1>
+    </div>
+    <div id="wrap">
+            <div id="aside">
+                <h1>#aside 영역</h1>
+            </div>
+            <div id="content">
+                <h1>#content 영역</h1>
+            </div>
+    </div>
+    <fieldset>
+        <legend>중복 클래스/다중 선택</legend>
+        <h1 class="item1 item2">SAVE The Green Earth</h1>
+        <h3 class="item1">asap</h3>
+        <h3 class="item2">가능한 빨리 해결합시다.</h3>
+    </fieldset>
+</body>
+</html>

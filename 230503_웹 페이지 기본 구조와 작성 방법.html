@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 페이지 기본 구조와 작성 방법 미니테스트</title>
+    <style>
+        .box{background-color: rgba(186, 186, 186, 0.681); width: 800px;}
+        table{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>웹 페이지 기본 구조와 작성 방법 미니테스트</h1>
+    <h3>01 다음 괄호 안을 채우시오.</h3>
+    <p>( 요소 element / component )는 HTML 페이지를 구성하는 각 부품입니다<br>
+       ( 태그 )는 요소를 만들 때 사용하는 작성 방법입니다.<br>
+       ( 주석 )은 프로그램 실행에는 영향을 미치지 않고 설명용으로 사용하는 코드를 의미합니다.<br>
+       ( 스타일시트 / CSS )는 마크업 언어가 표시되는 방법을 기술하는 언어로 HTML 페이지의 스타일을 지정할 때 사용합니다.<br>
+       ( 자바스크립트 / JS )는 HTML 페이지에서 사용하는 프로그래밍 언어를 의미합니다.</p>
+    <h3>02 다음 질문에 OX를 표시하시오.</h3>
+    <p>(1) HTML 태그는 반드시 내부에 무언가를 포함해야 합니다.  ( X )<br>
+       (2) HTML 태그 내부에는 텍스트만 입력할 수 있습니다. ( X )<br>
+       (3) html 태그의 lang 속성은 구글 등 검색 엔진에 문서의 언어 정보를 알려 줄 때 사용됩니다. ( O )</p>
+    <h3>03 다음 HTML 요소의 속성 이름과 속성 값, 태그 이름을 모두 적으시오.</h3>
+        <table border="1">
+            <colgroup>
+                <col style="width: 400px;"/>
+            </colgroup>
+        <tr style="border: 1px solid blue; width:500px">
+            <!--row span : 세로 병합-->
+            <!--col span : 가로 병합-->
+           <td>&#8249;img title="바다" alt="sea" src="sea.png"&#8250;</td>
+            <td>태그 : img<br>
+                속성 : title, art, src<br>
+                값 : 바다, sea, sea.png<br>
+            </td>
+        </tr>
+    </table>
+    <h3>04 다음 중 head 태그 내부에 입력할 수 없는 태그는?</h3>
+    <p>① style 태그	② meta 태그    ③ base 태그    <strong>④ header 태그</strong></p>
+    <h3>05 HTML5 기본 페이지 형태(골조)를 하단 공란에 적으시오.</h3>
+    <fieldset class="box">
+        &#8249;html&#8250;
+        &#8249;head&#8250;&#8249;/head&#8250;
+        &#8249;body&#8250;&#8249;/body&#8250;
+        &#8249;/html&#8250;
+    </fieldset>
+    <h3>06 다음 코드에서 잘못된 부분을 찾아 바르게 수정하시오.</h3>
+    <fieldset class="box">
+        <code>
+            <p>
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <title>HTML5 Basic</title>
+            <style src="outer_stylesheet.css"></style>
+            <script src="outer_javascript.js"></script>
+            </head>
+            <body>
+            </body>
+            </html>
+            </p>
+        </code>
+    </fieldset>
+    <p>수정되어야 할 구문 : &#8249;link rel="stylesheet"href="outer_stylesheet.css"&#8250;</p>
+    <h3>07 아직 어떤 HTML 태그가 어떤 기능을 하는지 배울것이 많이 남아있지만,<br> 
+        코드를 조금씩 입력해 보며 h1 이라는 태그를 사용하면 크고 굵은 글씨를 출력할 수 있음을 알았을 것입니다.<br> 
+        이를 활용해서 간단한 생각을 표현해 보세요.</h3>
+        <table class="Box">
+            <tr>
+            <td><span>💡</span></td>
+            <td>
+                <p>자세히 보아야 예쁘다<br>
+                   오래 보아야 사랑스럽다<br>
+                   너도 그렇다<br></p>
+                    <br>
+                    <h4>-나태주, 풀꽃</h4>
+            </td>
+            </tr>
+        </table>
+</body>
+</html>

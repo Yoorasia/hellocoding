@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <!--
+                input 태그의 속성 종류 : 
+                1. type - 텍스트, 메일주소, 패스워드, 체크 등 다양한 종류
+                2. name - input type의 목적, 쓰임새를 정의 -> 서버 전송
+                3. value - 입력 공간 안에 견본 값을 써놓음
+                4. placeholder - 힌트. 해당하는 입력 공간이 뭘 쓰는 공간인지 설명
+                5. id - css할당 가능, 경로의 제목, label 태그와 연결, js에서 호출 할 수 있는 이름
+                6. disabled - 잠금, 비활성화, 사용자가 입력공간 편집을 못함
+            -->
+            <!--
+                js, 스크립트 언어들 (java, C#)을 사용할 때,
+                변수 이름 짓기, 함수 입력하기, 메소드, 객체 호출하기...
+                카멜(camel) 표기법 : "nameInput"
+                낙타 등 처럼
+
+                HTML, CSS, SASS - 클래스(별명)지어줄 때
+                케밥(kebab) 표기법 : "name-input-selet"
+                고기 덩어리 (꼬치)
+            -->
+            <legend>type 속성</legend>
+            <p>
+                <label for="nameInput">아이디 : </label>
+                <input type="text" name="id" id="nameInput" value="홍길동" placeholder="아이디를 입력하세요"></p>
+            <p>비밀번호 : <input type="password"></p>
+            <p>검색 : <input type="search"></p>
+            <p>이메일 : <input type="email"></p>
+            <p>전화번호 : <input type="tel"></p>
+            <p>컬러선택 : <input type="color"></p>
+            <p>수량 : <input type="number" min="1" max="10" value="1"></p>
+            <p>만족도 : <input type="range" min="1" max="10" value="1"></p>
+            <p>예 : <input type="radio" name="receive" checked="checked"> 아니오<input type="radio" name="receive"></p>
+            <p>HTML : <input type="checkbox" checked="checked"> CSS : <input type="checkbox"></p>
+            <p><input type="submit" value="전송"></p>
+            <p><input type="reset" value="취소"></p>
+            <p><input type="button" value="확인"></p>
+            <p><input type="image" src="images/bt.png" alt="검색"></p>
+            <p><input type="file"></p>
+            <select multiple="multiple">
+                <optgroup label="분식">
+                    <option value="">김밥</option>
+                    <option value="">떡볶이</option>
+                    <option value="">순대</option>
+                    <option value="">어묵</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <input type="text" name="search">
+        <input type="submit">
+    </form>
+</body>
+</html>

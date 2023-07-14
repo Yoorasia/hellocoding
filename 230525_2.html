@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS필수속성(텍스트+컬러+백그라운드)</title>
+    <style>
+        *{margin: 0 auto; box-sizing: border-box;}
+        section{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: burlywood;
+        }
+        article{width: calc(33% - 2rem); margin: 1rem;}
+        article img{
+            width: 37.5rem;
+            height: 25rem;
+        }
+        /*
+        fantasy : 환상, 화려한 글꼴, 옛날 영자 신문의 제목
+        serif : 덩쿨, 장식이 있는 명조 계열의 글꼴
+        sans-serif : 고딕계열의 모든 서체
+        monospace : i, r 등 상대적으로 폭이 좁은 알파벳, 넓게 차지하는 알파벳 상관없이 일정한 간격을 주는 서체
+                    옛날 타자가 느낌의 간격을 볼 수 있음.
+        cursive : 손글씨, 필기체 느낌
+
+        명조, 궁서, 바탕, 고딕
+        */
+        blockquote{
+            font-family: 'gothic';
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-style: italic;
+            color: rgb(104, 62, 0);
+        }
+				article p{
+						/*0~255 값 사이에서 값을 정욕할 수 있다.*/
+            color: rgb(red, green, blue);
+        }
+</style>
+</head>
+<body>
+    <section>
+        <article>
+            <h3>스타벅스</h3>
+            <img src="./스타벅스.png" alt="스타벅스 이미지">
+            <blockquote>“커피 이상의 특별한 경험을 소개합니다.”</blockquote>
+            <p>
+                세계인들의 생활 속에 스며들어 전 세계의 커피 문화를 선도하고 있는 스타벅스가 일상을 풍요롭게 하는 제3의 공간으로서
+                국내에서도 지역사회 속에서 고객 과 함께하며 새로운 커피문화를 정착시키고 있습니다.
+            </p>
+        </article>
+        <article>
+            <h3>이디야</h3>
+            <img src="./이디야.png" alt="이디야 이미지">
+            <blockquote>“커피 이상의 특별한 경험을 소개합니다.”</blockquote>
+            <p>
+                세계인들의 생활 속에 스며들어 전 세계의 커피 문화를 선도하고 있는 스타벅스가 일상을 풍요롭게 하는 제3의 공간으로서
+                국내에서도 지역사회 속에서 고객 과 함께하며 새로운 커피문화를 정착시키고 있습니다.
+            </p>
+        </article>
+        <article>
+            <h3>타이지엔</h3>
+            <img src="./타이지엔.png" alt="타이지엔 이미지">
+            <blockquote>“커피 이상의 특별한 경험을 소개합니다.”</blockquote>
+            <p>
+                세계인들의 생활 속에 스며들어 전 세계의 커피 문화를 선도하고 있는 스타벅스가 일상을 풍요롭게 하는 제3의 공간으로서
+                국내에서도 지역사회 속에서 고객 과 함께하며 새로운 커피문화를 정착시키고 있습니다.
+            </p>
+        </article>
+    </section>
+</body>
+</html>

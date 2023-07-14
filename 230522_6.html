@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css문서가 들어있는 파일 경로">
+    <style>
+        *{margin: 0 auto;}
+        /*태그 선택자 (p태그 스타일)*/
+        p{color: lightcoral;}
+        /*태그 선택자 (section 태그 스타일)*/
+        section{width: 800px;
+            background-color: olive;}
+        /*아이디 선택자 (id 속성으로 스타일 추가)*/
+        #color1{font-size: 1.2rem;
+            color: violet;}
+        /*클래스 선택자 (class 속성으로 스타일 추가)*/
+        .high{font-family: monospace;}
+        /*그룹 선택자 (여러 선택자를 묶어 지정)*/
+        h1, p{text-align: center;}
+        /*자손(바로 아래 자식 아버지-아들) 선택자*/
+        fieldset > legend{font-weight: bold;}
+        /*후손(내 직계를 비롯한 +손자들) 선택자*/
+        fieldset p{font-style: italic;}
+    </style>
+</head>
+<body>
+    <section>
+    <fieldset>
+        <legend style="margin:auto;">CSS 문법 형식</legend>
+        <h1>CSS기초 1</h1>
+        <p>
+            1 선택자, 2 중괄호 안(속성, 값) 으로 이루어져 있습니다. 
+        </p>
+        <p>
+            CSS 설명(주석)을 남기려면 /* 텍스트 */ 이렇게 표기합니다.
+        </p>
+        <p id="color1">
+            현재 사용중인 CSS 호출 방식은 inline방식, embed(internal-내부스타일시트)방식
+            linked(external-외부스타일시트)방식, 이렇게 3가지의 방식으로 호출하는데, 그 중 
+            내부스타일시트 방식을 사용하고 있습니다.
+        </p>
+        <ul>
+            <li><b id="color1">인라인</b><mark class="high"> : &lt;태그 style="css 코드"&gt;</mark></li>
+            <li><b id="color1">엠베드</b><mark class="high"> : 헤드 태그 안에 &lt;style&gt;/*css 코드*/&lt;style&gt;</mark></li>
+            <li><b id="color1">링크드</b><mark class="high"> : &lt;link rel="stylesheet" href="css문서가 들어있는 파일 경로"&gt;</mark></li>
+        </ul>
+    </fieldset>
+    </section>
+</body>
+</html>

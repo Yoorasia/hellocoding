@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 selector Basic</title>
+    <style>
+        li{list-style: none;
+        float: left; padding: 15px;}
+        li:last-child{border-radius: 0 20px 20px 0;}
+        li:first-child{border-radius: 20px 0 0 20px;}
+        /*짝수 표기 : nth-child(2n)*/
+        li:nth-child(even){background-color: black; color: brown;}
+        /*홀수 표기 : nth-child(2n+1)*/
+        li:nth-child(odd){background-color: brown; color: black;}
+        /*3의 배수 : nth-child(3n)*/
+    </style>
+</head>
+<body>
+    <ul>
+        <li>첫째칸</li>
+        <li>둘째칸</li>
+        <li>셋째칸</li>
+        <li>넷째칸</li>
+        <li>다섯째칸</li>
+        <li>여섯째칸</li>
+        <li>막내칸</li>
+    </ul>
+</body>
+</html>

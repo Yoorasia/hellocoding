@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ns{
+            width: 100%;
+            display: inline;
+        }
+        .page{
+            border: 3px solid crimson;
+        }
+        header{
+            border: 3px solid goldenrod;
+        }
+        nav{
+            border: 3px solid palevioletred;
+            width: 150px;
+            float: left;
+            /*자동 순차가 생김*/
+        }
+        section{
+            /*aside : 사이드바*/
+            border: 3px solid skyblue;
+            margin-left: 156px;
+        }
+        footer{
+            border: 3px solid aquamarine;
+        }
+        h2, li, p{text-align: center;}
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Float 속성을 이용한 레이아웃</h1>
+    <div class="page">
+    <header>
+        <h2>header</h2>
+    </header>
+    <div class="ns">
+    <nav>
+        <h2>nav</h2>
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+        </ul>
+    </nav>
+    <section>
+        <h2>section</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Expedita eum voluptate quo at, facilis repellendus. Esse, autem. 
+            Non sequi nemo blanditiis? 
+            Perspiciatis consequatur ullam aspernatur debitis. 
+            Aut, explicabo pariatur. Aperiam!</p>
+    </section>
+    </div>
+    <footer>
+        <h2>footer</h2>
+    </footer>
+    </div>
+</body>
+</html>

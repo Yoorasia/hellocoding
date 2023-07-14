@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 양식 태그와 구조화 태그</title>
+</head>
+<body>
+    <h1>HTML5 입력 양식 태그와 구조화 태그</h1>
+    <h3>01 다음 괄호 안을 채우시오.</h3>
+    <ul>
+        <li>( 입력양식 )은 사용자에게 정보를 입력받는 요소입니다.</li>
+        <li>form 태그는 ( method )속성의 방식으로 ( action )속성 장소에 데이터를 전달합니다.</li>
+        <li>( GET )방식은 주소에 데이터를 입력해서 전달합니다.</li>
+        <li>( POST )방식은 GET 방식과 달리 비밀스럽게 데이터를 전달합니다.</li>
+        <li>input 태그에 ( type )속성을 지정해서 다양한 종류의 기본 입력 양식을 생성합니다.</li>
+        <li>라디오 버튼의 ( name )속성을 사용하면 여러 대상 중 하나만 선택하는 형태를 구현 할 수 있습니다.</li>
+        <li>( select )태그는 목록으로 보여 주는 항목 중 하나 또는 여러 개를 선택할 때 사용하는 입력 양식 요소입니다.</li>
+        <li>div 태그는 공간을 ( 블록 )형식으로 분할합니다.</li>
+        <li>span 태그는 공간을 ( 인라인 )형식으로 분할합니다.</li>
+        <li>( 시맨틱 웹 )은 컴퓨터 프로그램이 코드를 읽고 의미를 인식할 수 있는 지능형 웹을 의미합니다.</li>
+    </ul>
+    <h3>02 다음 질문에 OX를 표시하시오.</h3>
+    <ol>
+        <li>“https://www.google.com/search?q=초콜릿”처럼 주소에 “q=초콜릿” 데이터를 넣은 것은 POST 방식의 요청입니다. ( X )</li>
+        <li>label 태그의 for 속성에 “입력 양식 태그의 id 속성”을 넣으면, label 태그를 선택했을 때 입력 양식에 포커스가 갑니다. ( )</li>
+        <li>select 태그 내부에 opt 태그를 넣어서 선택할 수 있는 요소를 만듭니다. ( )</li>
+        <li>현대 웹 페이지의 레이아웃을 구성할 때는 테이블을 사용합니다. ( )</li>
+        <li>a 태그와 i 태그 등 텍스트는 블록 형식의 태그입니다. ( )</li>
+        <li>모든 검색 엔진은 웹문서에 적용된 스타일을 시각적으로 분석하고 의미를 파악합니다. ( )</li>
+        <li>시맨틱 태그는 시맨틱 웹을 구현할 때 사용하는 방법입니다. ( )</li>
+    </ol>
+    <h3>03 다음 중 HTML5 표준에 추가된 시맨틱 태그가 아닌 것은? ( )</h3>
+    <p>① head 태그 ② nav 태그 ③ aside 태그 ④ footer태그</p>
+    <br>
+    <h3>04 select 태그 내부에서 각 항목을 만드는 데 사용하는 태그는? ( )</h3>
+    <p>① li 태그 ② option 태그 ③ item 태그 ④ opt 태그</p>
+    <br>
+    <h3>05 다음 중에서 인라인 형식의 태그는? ( )</h3>
+    <p>① h1 태그 ② div 태그 ③ span 태그 ④ p 태그</p>
+    <br>
+    <h3>06 form 태그의 method 속성을 GET과 POST로 입력할 때, 버튼을 클릭해 서버로 데이터를 전송한 후 웹 브라우저의 주소 창에 나타나는 URL 변화를 적으시오.</h3>
+    <textarea name="" id="" cols="30" rows="10">
+        ♦ 이 박스의 형태는 textarea로 작업하되, 지금 보이는 문구가 작성 전 보일 수 있도록 하시오.
+    </textarea>
+    <h3>07 다음 입력 양식을 만드시오.</h3>
+    <table>
+        <tr>
+            <th>아이디</th>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <th>비밀번호</th>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <th> </th>
+            <td><input type="submit" value="제출"></td>
+        </tr>
+    </table>
+    <h3>08 다음 입력 양식을 만드시오.</h3>
+    <table>
+        <tr>
+            <td>Search:</td>
+        </tr>
+        <tr>
+            <td><input type="search" placeholder="Enter keyword"></td>
+            <td><input type="submit" value="Search"></td>
+        </tr>
+    </table>
+    <h3>09 다음 입력 양식을 만드시오.</h3>
+    <fieldset style="width: 500px;">
+        <legend>Your Details:</legend>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset style="width: 500px;">
+        <legend>Your Review:</legend>
+        <table>
+            <tr>
+                <td>How did you hear about us?</td>
+                <td><select>
+                    <optgroup label="Google">
+                        <option value="Google"></option>
+                    </optgroup>
+                </select></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td colspan="3">Would ypu visit again?</td>
+            </tr>
+            <tr>
+                <td><input type="radio"> yes </td>
+                <td><input type="radio"> No </td>
+                <td><input type="radio"> Maybe </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>Comments:</td>
+            </tr>
+            <tr>
+                <td><textarea name="" id="" cols="30" rows="10"></textarea></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td> Sign me up for email updates</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Submit review"></td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>
