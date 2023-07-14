@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        header a{display: flex; padding: 10px 0;}
+        header a img{width: 5%;
+            margin: 0 auto;
+        }
+        section{
+            padding: 20px;
+            background-image: url(https://images.unsplash.com/photo-1569982175971-d92b01cf8694?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80);
+            background-size : cover; 
+            align-items: center;
+        }
+        ul{list-style-type: none;}
+        li img{width: 150px;}
+        .album-cover{border-radius: 50%; width: 20vw; height: 20vw;}
+        .album-card{
+            display: inline-block;
+            margin: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            min-width: 100px;
+        }
+        .album-card:hover{
+            transform: scale(1.05);
+        }
+        .album-cover{
+            width: 250px;
+            height: 250px;
+        }
+        .album-list{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a class="brand" href="//soundcloud.com/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/26/26789.png?w=826&t=st=1686802049~exp=1686802649~hmac=947c4d2a6fd07d5af85d5b7aa64dfd374c689f3c939b600387fe9e8800b5e64d" alt="Sound Cloud">
+        </a>
+    </header>
+    <section> 
+      <ul class="album-list">
+        <li class="album-card">
+          <img
+            class="album-cover" 
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAzMjJfMjIy%2FMDAxNjc5NDkzNDE1NjAw.u_bhNy5Eqo822CytqqdOtl0F1tsOgzhh7SOWxmaVhFIg.GzYxFAH94g7wR5aGttZvrdaKxdT7V52QMuLUnRXBXnUg.JPEG.uomm38%2F%25BE%25D9%25B9%25FC%25C4%25BF%25B9%25F6.jpg&type=sc960_832"
+            alt="Tobu - Calling"
+            width="340" height="340">
+        </li>
+        <li class="album-card">
+          <img
+            class="album-cover"
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAzMTNfMTc5%2FMDAxNjE1NjQzMjk4MTEw.wmC9cqd0xQLxMgVN78h6rRNxIgeywoFTGTDY4QvaN8wg.6-xdU1fozxGNZ5oP0_aQCTNmBEaYvleLwbBC1kuq4O0g.JPEG.sunnut_studio%2F%25B8%25F1%25BE%25F72.jpg&type=sc960_832"
+            alt="Outside Today - YoungBoy Never Broke Again"
+            width="340" height="340">
+        </li>
+        <li class="album-card">
+          <img
+            class="album-cover" 
+            src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fgigs%2FA6iu01599143954.jpg&type=sc960_832"
+            alt="Sensetive Time 179 (24.04.2017) - SENSETIVE5"
+            width="340" height="340">
+        </li>
+        <li class="album-card">
+          <img
+            class="album-cover"
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMjhfMjQy%2FMDAxNjExODA3OTI4MjQ1.E9x6Kt5-fEEbhFe7fmeEM38sPenz31JrPuUwqHBitw8g.DdQemKTCauLQA3r8p976m7CSugG3kOlCAKUc6Pec5mgg.JPEG.dbrkdmsyge12%2F%25BE%25D9%25B9%25FC_%25B8%25F1%25BE%25F7.jpg&type=sc960_832"
+            alt="Outside Today - YoungBoy Never Broke Again"
+            width="340" height="340">
+        </li>
+        <li class="album-card">
+          <img
+            class="album-cover" 
+            src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fgigs%2FbSHUw1522133017.jpg&type=sc960_832"
+            alt="Sensetive Time 179 (24.04.2017) - SENSETIVE5"
+            width="340" height="340">
+        </li>
+        <li class="album-card">
+          <img
+            class="album-cover" 
+            src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fgigs%2FRe9u01522133043.jpg&type=sc960_832"
+            alt="Sensetive Time 179 (24.04.2017) - SENSETIVE5"
+            width="340" height="340">
+        </li>
+      </ul>
+</body>
+</html>

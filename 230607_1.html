@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}/*웹문서 전체공간에 빠짐없이 활용.*/
+        body{display: flex;}/*가로형 확장, 웹문서 전체 높이 활용*/
+        section{
+            display: inline-block;/*다른 형제들과 나란히 배치하기 위함*/
+            vertical-align: top;/*valign의 원형, 인라인요소(section) 위쪽으로 맞추기 위함. (수직정렬시 활용)*/
+            justify-content: center;/*콘텐츠를 수평정렬함.(수평정렬)*/
+            align-items: center;/*콘텐츠를 수직정렬함.*/
+            padding: 50px 40px;/*상 하 50px 좌 우 40px*/
+            width: 25vw;/*가로 넓이 4개의 section영역 전부 25% 부여*/
+            height: 100vh;/*세로 폭 4개의 section영역 전부 100%부여*/
+            color: #fff;/*글자색*/
+            box-sizing: border-box;/*section 크기의 계산 방법 선택함*/
+            transition: all 0.5s;/*애니메이션 구현 시간이 0.5초*/
+            }
+            section:nth-of-type(1){ background-position: center; 
+            background-image: url(https://images.unsplash.com/photo-1620694563886-c3a80ec55f41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80);
+            background-size: cover;}
+            section:nth-of-type(2){background-position: 30%; 
+            background-image: url(https://images.unsplash.com/photo-1539418561314-565804e349c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80);
+            background-size: cover;}
+            section:nth-of-type(3){background-position: center; 
+            background-image: url(https://images.unsplash.com/photo-1604756790000-8d8c96e8d92b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=327&q=80);
+            background-size: cover;}
+            section:nth-of-type(4){background-position: 20%; 
+            background-image: url(https://images.unsplash.com/photo-1614177308645-eb20c08f88d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80);
+            background-size: cover;}
+        section:hover{
+            width: 50vw;
+        }
+        section h1{
+            margin: 100px;
+            font-size: 45px;
+            transition: transform .5s;
+            transform: rotate(90deg);
+        }
+        section:hover h1{
+            font-size: 45px;
+            transform: rotate(0);
+        }
+        section p{
+            opacity: 0;
+            font-size: 16px;
+            transition: all .5s;
+        }
+        section:hover p{
+            opacity: 1;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="spring">
+        <h1>Spring</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem illo sit itaque perferendis animi maxime dolorem vel eum repudiandae.</p>
+    </section>
+    <section class="summer">
+        <h1>Summer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem illo sit itaque perferendis animi maxime dolorem vel eum repudiandae.</p>
+    </section>
+    <section class="fall">
+        <h1>Fall</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem illo sit itaque perferendis animi maxime dolorem vel eum repudiandae.</p>   
+    </section>
+    <section class="winter">
+        <h1>Winter</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem illo sit itaque perferendis animi maxime dolorem vel eum repudiandae.</p>
+    </section>
+</body>
+</html>

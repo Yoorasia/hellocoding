@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        자바스크립트 기본 문법 미니테스트
+    </h1>
+    <h2>01 다음 괄호 안을 채우시오.</h2>
+    <ol>
+        <li>( 표현식/구문 )은 값을 만들어 내는 간단한 코드입니다.</li>
+        <li>( 문장 )은 프로그래밍 언어에 실행할 수 있는 코드의 최소 단위입니다.</li>
+        <li>문장 마지막에 ( ; ) 또는 ( &#60;br&#62; ) 을 넣어 종결을 나타냅니다.</li>
+        <li>( 키워드 )는 자바스크립트를 처음 만들 때 정해진 특별한 의미가 부여된 단어입니다.</li>
+        <li>( 식별자 )는 자바스크립트에서 변수나 함수 등에 이름을 붙일 때 사용하는 단어입니다.</li>
+        <li>( 주석, 주석문 )은 프로그램 진행에 전혀 영향을 주지 않는 코드로, 프로그램 설명에 사용합니
+            다.</li>
+        <li>( 문자열 )은 문자 집합을 의미합니다.</li>
+        <li>( boolean )은 참과 거짓을 표현할 때 사용하는 자료입니다.</li>
+        <li>( 비교연산자 )는 두 대상을 비교할 수 있는 연산자입니다.</li>
+        <li>( 변수 )는 값을 저장할 때 사용하는 식별자입니다.</li>
+        <li>변수를 만드는 것을 ‘변수를 ( 선언 )한다’고 표현합니다.</li>
+        <li>변수에 값을 저장하는 것을 ‘변수에 값을 ( 할당 )한다’고 표현합니다.</li>
+        <li>변수를 선언한 후 처음 값을 할당하는 것을 ‘변수를 ( 초기화 )한다’고 표현합니다.</li>
+        <li>( 함수 )는 코드 집합입니다.</li>
+        <li>( 배열 )은 변수 여러 개를 순서 ( 인덱스 )로 한꺼번에 다룰 수 있는 자료형입니다.</li>
+        <li>( 콜백함수 )는 매개변수로 전달되는 함수입니다.</li>
+        <li>( 객체 )는 자료형 여러 개를 이름 ( 키 )으로 한 번에 저장하는 자료형입니다.</li>
+        <li>( 요소 )는 배열에 있는 값 하나하나를 나타냅니다.</li>
+        <li>( 속성 )은 객체에 있는 값 하나하나를 나타냅니다.</li>
+    </ol>
+    <h2>02 다음 질문에 OX를 표시하시오.</h2>
+    <ol>
+        <li>식별자에 사용할 수 있는 특수 문자는 @, $, _가 있습니다. ( X )</li>
+        <li>배열에 들어 있는 요소 개수를 확인할 때는 length 속성을 사용합니다. ( O )</li>
+        <li>자바스크립트는 한 줄 주석으로 # 기호를 사용합니다. ( X )</li>
+        <li>자바스크립트는 0으로 나누었을 때 오류가 발생합니다. ( X )</li>
+        <li>자바스크립트는 10/3을 하면, 정수 나눗셈이 실행되어 3을 결과로 출력합니다. ( X )</li>
+        <li>불 자료형의 값은 true와 false밖에 없습니다. ( O )</li>
+        <li>자바스크립트는 문자열 불 연산도 가능하며, 한글을 예로 들면 사전 순서로 앞에 있는 값이 작은 값을 가집니다. ( O )</li>
+        <li>배열은 대괄호([ ])를 사용해서 생성하고, 객체는 중괄호({ })를 사용해서 생성합니다. ( O )</li>
+        <li>배열을 array = [‘가’, ‘나’, ‘다’]로 만들었다면, ‘가’를 선택할 때는 array[1] 형태의 코드를 사용합니다. ( X )</li>
+        <li>배열 값은 한 번 정해지면 변경할 수 없습니다. ( X )</li>
+        <li>선언적 함수는 익명 함수보다 먼저 선언됩니다. ( O )</li>
+        <li>함수를 선언할 때는 매개변수와 리턴 값을 반드시 넣어야 합니다. ( X )</li>
+        <li>함수의 매개변수로 익명 함수를 전달할 경우 오류가 발생합니다. ( X )</li>
+        <li>객체 속성으로 함수를 지정할 경우 메서드라고도 합니다. ( O )</li>
+        <li>메서드 내부에서 해당 객체가 가진 객체를 나타낼 때는 this 키워드를 사용하지만, 
+            어차피 자기 자신이 갖고 있는 속성이므로 속성에 접근할 때는 this 키워드를 사용하지 않아도 됩니다. ( X )</li>
+    </ol>
+    <h2>03 다음 중에서 식별자로 사용할 수 있는 것은? ( ② )</h2>
+    <p>① downloaded data ② $
+        ③ 2nd_test ④ for</p>
+    <h2>04 다음 중에서 키워드가 아닌 것은? ( ① )</h2>
+    <p>① alert ② for
+        ③ if ④ while</p>
+    <h2>05 다음 중에서 false로 변환되는 것은? ( ③ )</h2>
+    <p>① ‘1’ ② ‘false’
+        ③ ‘ ’ ④ 20</p>
+    <h2>06 다음 코드의 실행 결과를 예측하시오.</h2>
+    <ul>
+        <textarea id="" cols="50" rows="5">
+(1)
+alert(10 + 20 + '!!!!')</textarea>
+        <li>실행결과 : 30!!!!을 출력한다.</li>
+        <textarea id="" cols="50" rows="8">
+(2)
+// 변수를 선언합니다.
+var number = 10;
+// 출력합니다.
+alert(++number);
+alert(++number);
+alert(++number);</textarea>
+        <li>실행결과 : 11, 12, 13을 차례대로 출력한다.</li>
+        <textarea id="" cols="50" rows="5">
+(3)
+var test = function () { return 10 }
+function test() { return 20 }
+// 출력합니다.
+alert(test)</textarea>
+        <li>실행결과 : test이라는 구문이 팝업 형태로 출력된다.</li>
+    </ul>
+    <h2>07 연산자 =과 ==의 차이점을 적으시오.</h2>
+    <ul>
+        <li>정답: =는 할당/대입 연산자이고 ==는 비교 연산자이다.</li>
+    </ul>
+
+    <h2>08 다음 if 조건문을 논리 연산자를 사용해 하나의 if 조건문으로 작성하시오.</h2>
+    <textarea id="" cols="100" rows="5">
+if (x > 10) {
+    if (x < 20) {
+    alert(x);
+    }
+}</textarea>
+<textarea id="" cols="100" rows="5">
+if(x > 10 && 20 < x) {alert(x);}
+</textarea>
+
+    <h2>09 다음 for 반복문을 while 반복문으로 변경하시오.</h2>
+    <textarea id="" cols="100" rows="5">
+for (var i = 1; i <= 10; i++) {
+alert(i);
+}</textarea>
+<textarea id="" cols="100" rows="8">
+var i = 1;
+while(i <= 10){
+    if(i % 5 ==0){
+    alert(i);
+    }
+    i++
+}</textarea>
+
+    <h2>10 다음 while 반복문을 for 반복문으로 변경하시오.</h2>
+    <textarea id="" cols="100" rows="5">
+var i = 10;
+while (i >= 0) {
+    alert(i);
+    i -= 3;
+}
+</textarea>
+<textarea id="" cols="100" rows="5">
+for(var i = 10; i >= 0; i -= 3){
+    alert(i);
+}
+</textarea>
+
+    <h2>11 센티미터cm를 입력하면 피트 feet와 인치inch로 변환하는 프로그램을 작성하시오.</h2>
+<textarea id="" cols="100" rows="5">
+    Hint
+    1feet=12inch, 1inch=2.54cm</textarea>
+<textarea id="" cols="100" rows="8">
+// 변수를 선언합니다.
+var input = parseFloat(prompt('cm 단위를 입력해주세요.', '입력'));
+var inch = input / 2.54;
+var feet = inch / 12;
+// 출력합니다.
+alert(input + '은 ' + inch + '인치, ' + feet + '피트입니다.' );</textarea>
+
+    <h2>12 원기둥 밑면의 반지름과 높이를 입력받아 부피를 계산하는 프로그램을 작성하시오.</h2>
+    <textarea id="" cols="100" rows="5">
+    Hint
+    원기둥의 부피 = 밑면의 넓이 × 높이 = (반지름 × 반지름 × π) × 높이</textarea>
+    <textarea id="" cols="100" rows="8">
+// 변수를 선언합니다.
+var radius = parseFloat(prompt('반지름을 입력해주세요.', '입력'));
+var height = parseFloat(prompt('높이를 입력해주세요.', '입력'));
+var volume = radius * radius * 3.14 * height;
+// 출력합니다.
+alert('부피는 ' + volume + '입니다.');</textarea>
+
+    <h2>13 네 자리 정수를 입력받아 천, 백, 십, 일의 자리로 분리해 출력하는 프로그램을 작성하시오.</h2>
+    <textarea id="" cols="100" rows="5">
+    Article
+    천의 자리는 parseInt (num/1000), 백의 자리는 parseInt (num%1000/100)으로 구할 수 있습니다. 
+    사용자에게 값을 입력받는 부분은 prompt( ) 함수를 사용합니다.
+    var input = prompt ("입력해주세요", "입력" )</textarea>
+    <textarea id="" cols="100" rows="8">
+// 변수를 선언합니다.
+var input = parseInt(prompt('네 자리 정수를 입력해주세요.', '입력'));
+var num_1000 = parseInt(input / 1000);
+var num_100 = parseInt(input % 1000 / 100);
+var num_10 = parseInt(input % 100 / 10);
+var num_1 = parseInt(input % 10);
+// 출력합니다.
+alert(num_1000 + '.' + num_100 + '.' + num_10 + '.' + num_1);</textarea>
+    <h2>14 사용자에게 태어난 연도를 입력받아 그 해의 띠를 출력하는 프로그램을 작성하시오.</h2>
+    <textarea id="" cols="100" rows="5">
+    Article
+    입력받은 연도를 12로 나눈 나머지를 사용합니다. 
+    나머지가 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11일 때는 
+    각각 원숭이띠, 닭띠, 개띠, 돼지띠, 쥐띠, 소띠, 범띠, 토끼띠, 
+    용띠, 뱀띠, 말띠, 양띠입니다.</textarea>
+    <textarea id="" cols="100" rows="10">
+// 변수를 선언합니다.
+var zodiac = [
+'원숭이', '닭', '개', '돼지',
+'쥐', '소', '범', '토끼',
+'용', '뱀', '말', '양'
+];
+// 사용자에게 입력을 받습니다.
+var year = parseInt(prompt('태어난 연도를 입력하세요.', '숫자'));
+alert(zodiac[input % 12]);</textarea>
+    <h2>15 반복문을 사용해 다음 그림과 같이 패턴을 출력하는 프로그램을 작성하시오. 반복문을 이중으로 사용합니다.</h2>
+    <textarea id="" cols="100" rows="10">
+별이 점점 나타나는 아래 화면을 도출해보십시오.
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********</textarea>
+        <textarea id="" cols="100" rows="10">
+var output = '';
+for (var i = 0; i < 10; i++) {
+for (var j = 0; j < i + 1; j++) {
+output += '*';
+}
+output += '\n';
+}
+alert(output);</textarea>
+</body>
+</html>

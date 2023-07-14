@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체 : 자바스크립트를 객체지향언어라고 합니다. (객체 기반의 언어라고도 합니다.)
+        //객체 : Obj(object) 오브젝트 = 데이터 값들을 가지고 있는 속성 + 매서드의 집합
+        var person = {
+            name: "홍길동",
+            age:  25,
+            job: "개발자",
+            sayHello : function(){
+                document.write (this.name + "님, 헬로우");
+            }
+                
+        };
+
+        document.write('이름' + person.name + '<br>'); //sun-shine 코드리뷰 : =; 23-07-14;
+        document.write('나이' + person.age + '<br>'); //sun-shine 코드리뷰 : =; 23-07-14;
+        person.sayHello();
+
+    </script>
+</body>
+</html>

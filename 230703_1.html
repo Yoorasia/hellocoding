@@ -1,0 +1,99 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+h1{text-align: center;}
+        .tab_container{
+            width: 600px;
+            margin: auto;
+        }
+        .tab_content{
+            width: 100%;
+            padding: 30px 0;
+        }
+        /*============================*/
+        .tabs ul{
+            width: 100%;
+            padding: 0;
+            list-style-type:none ;
+            display: table;
+            table-layout:;
+        }
+        .tabs li{
+            display: table-cell;
+            background-color: rgb(131, 79, 166);
+            border-top: 1px solid #aaa;
+            border-right: 1px solid #aaa;
+            border-bottom: 1px solid #111;
+            padding: 20px;
+            text-align: center;
+        }
+        .tabs li.active{
+            background-color: rgb(230, 186, 235);
+            border-left:1px solid #111;
+            border-top: 1px solid #111;
+            border-right: 1px solid #111;
+            border-bottom: 0;
+        }
+        .tabs li:active a{
+            color: rgb(103, 52, 110);
+            font-weight: 700;
+        }
+        .tabs li a{
+            font-size: 16px;
+            color: #4f2a62;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tab_1</h1>
+    <div class="tab_container">
+    <!--탭 메뉴 영역 -->
+      <div class="tabs">
+        <ul>
+          <li class="active"><a href="#" rel="tab1">탭1-1</a></li>
+          <li><a href="#" rel="tab2">탭1-2</a></li>
+          <li><a href="#" rel="tab3">탭1-3</a></li>
+        </ul>
+      </div>
+      <!--탭을 눌렀을 때 나오는 박스영역-->
+      <div id="tab1" class="tab_content">
+        탭1
+      </div>
+    
+      <div id="tab2" class="tab_content">
+        탭2
+      </div>
+
+      <div id="tab3" class="tab_content">
+        탭3
+      </div>
+    </div>
+    <script>
+        //탭 콘텐츠 영역 다 숨기기
+        $(".tab_content").hide();
+
+        //그 중, 첫번째 탭 처음에 나타내기
+        $(".tab_content").each(function(){ //반복문 (구문)
+            $(this).children(".tabs li:first").addClass("active"); //탭 메뉴 첫 번째
+            $(this).children(".tab_content").first().show(); //탭 박스 첫 번째
+        });
+
+        //탭메뉴 클릭 이벤트
+        $(".tabs li a").click(function () {
+            $(this).parent().siblings("li").removeClass("active");
+        $(this).parent().addClass("active"); $(this).parent().parent().parent().parent().find(".tab_content").hide();
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn();
+        });
+    </script>
+</body>
+</html>
+```

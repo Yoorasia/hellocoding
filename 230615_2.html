@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+          }
+          h1 {text-align:center; margin-top:100px;}
+          .wrapper {
+            background-color: black;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .logo {}
+          .part {width: 90px; 
+            height: 90px;}
+          .part-1{background-color: rgb(217, 38, 38); border-radius: 50px 0 0 50px;}
+          .part-2{background-color: rgb(240, 75, 75); border-radius: 0 50px 50px 0;}
+          .part-3{background-color: blueviolet; border-radius: 50px 0 0 50px;}
+          .part-4{background-color: deepskyblue; border-radius: 50px;}
+          .part-5{background-color: lightgreen; border-radius: 50px 0 50px 50px;}
+
+          .wrap{display: flex;}
+    </style>
+</head>
+<body>
+    <body>
+        <h1>CSS 플렉스박스로 피그마 로고 제작해보기</h1>
+    <div class="wrapper">
+      <div class="logo">
+        <div class="wrap">
+        <div class="part part-1"></div>
+        <div class="part part-2"></div>
+        </div>
+        <div class="wrap">
+        <div class="part part-3"></div>
+        <div class="part part-4"></div>
+        </div>
+        <div class="wrap"></div>
+        <div class="part part-5"></div>
+        </div>
+      </div>
+    </div>
+    </body>
+</body>
+</html>

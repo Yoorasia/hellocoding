@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow-x: hidden;/*내용이 틀어지거나, 리스트를 더 추가했을 때, 내용이 넘칠 때, 내용을 숨길 것*/
+            min-height: 100vh; /*(최소 이 body는 높이가 내 화면비 세로 길이 전체를 쓰겠다.*/
+            background: #1f4037;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        header{
+            overflow: hidden; /*가로방향으로, 이미지나, 내용이 넘치면, 스크롤되지 않고, 그냥 숨김니다.*/
+            position: fixed; /*문서의 고정 위치로 띄웁니다. *보통은 fixed를 쓸 때, top:0. left:0.에 맞추는 것을 많이 합니다.* */
+            top:0;
+            left: 0; /*헤더의 시작점을 왼쪽 상단 모서리로 맞춥니다.*/
+            z-index: 1000;/*헤더의 순서를 제일 위에(앞에) 뜨게 해줍니다.*/
+            width: 100%; /*부모 너비를 그대로 100% 반영합니다.*/
+            height: 80px; /*높이는 고정비 80px 정도를 줍니다.*/
+            border-bottom: 2px solid rgba(120, 120, 120, 0.25); /*아래 그림자 처럼 보이는 선을 넣습니다.*/
+            background-color: aliceblue;
+        }
+
+        .브랜드{
+            display: flex; /*이 요소만 주어도 수평 정렬이 됩니다.*/
+            justify-content: center; /*인라인 기준으로 수평 가운데 정렬을 만듭니다.*/
+            align-items: center; /*블록 기준, 수직 가운데 정렬을 만듭니다.*/
+            height: inherit; /*부모가 있다면, 그 부모의 높이를 할당받습니다.*/
+        }
+
+        .브랜드 img{
+            width: auto; /*이미지 너비는 자동 할당됩니다.*/
+            height: 35px; /*높이를 고정비 35px로 조절했습니다.*/
+        }
+        .앨범리스트{
+            width: 100%; /*첫번째로, 앨범리스트의 영역은 더 윗 부모의 너비값을 그대로 백퍼센트 할당받습니다.*/
+            min-width: 400px; /*그럼에도, 최소 400px까지는 더 줄어들지 않게 합니다.*/
+            max-width: 1200px; /*그럼에도, 최대 1200px 이상으로는 더 늘 거리가 없습니다.*/
+            margin-top: 140px; /*위여백을 140px 가량 주어서 헤더와 거리를 두고자 합니다.*/
+            margin-left: auto; 
+            margin-right: auto; /*좌, 우 자동 값을 주어, 가운데 정렬을 의도합니다.*/
+            list-style-type: none; /*불릿제거*/
+            padding-left: 0;/*좌측 패딩을 없앴습니다.*/
+
+
+            /*---------23.06.16 가운데 정렬 해당 구문 추가------------------------------*/
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap:wrap;
+        }
+        .앨범리스트::after{
+            content:"";
+            display: block;
+            clear: both;
+        }
+        @media screen and (max-width:1199px){ /*화면 너비가 1199px일때 까지는 너비 값이 800px 치의 레이아웃으로 한다.*/
+            .앨범리스트{
+            width: 800px;
+            }
+        }
+        @media screen and (max-width:799px){ /*화면 너비가 799px일때 까지는 너비 값이 400px 치의 레이아웃으로 한다.*/
+            .앨범리스트{
+            width: 400px;
+            }
+        }
+
+        .앨범카드::before{
+            content: "";/*빈 문자열, 빈 구문*/
+            z-index: -10;/*가상의 위치를 제일 멀리(뒤로) 보냅니다.*/
+            position: absolute;/*가상의 위치를 제일 멀리(뒤로) 보냅니다.*/
+            top: -100px;
+            left: -100px;
+            right: -100px;
+            bottom: -100px;/*가상의 위치임에도 앨범 카드 크기보다 멀리 설정해서 웹상에 도출되지 않게 하는 의도입니다.*/
+            clear: both;
+        }
+
+        .앨범카드{
+            cursor:pointer;/*마우스 커서 스타일을 변경*/
+            overflow: hidden;/*내용이 요소의 영역을 벗어날 경우 숨깁니다.*/
+            float: left;/*왼쪽 방향으로 부유시켜서 정렬해줍니다.*/
+            position: relative;/* 요소의 공간을 상대적으로 설정합니다.*/
+            width: 340px; /*너비 340px;*/
+            height: 340px; /*높이 340px;*/
+            transition: all 0.3s ease-in-out;/*앨범카드한테 모든 트랜지션 효과를 0.3s동안 주는데, 줄때 in-out속도스타일을 줍니다.*/
+            box-shadow: 0 0 0 1px #3f3f3f;/*앨범카드에 1px 너비, 회색계열 색상을 줍니다.*/
+            border-radius: 170px;/*테두리를 둥글게 처리하기 위해 반지름 수치인 170px을 씁니다.*/
+
+             /*---------23.06.16 가운데 정렬 해당 구문 추가------------------------------*/
+            margin: 20px;
+        }
+        .앨범카드:hover{
+            transform: scale(1.2);/*앨범카드를 1.2배 확대합니다.*/
+            box-shadow: 0 25px 20px -1px rgba(0, 0, 0, 0.25), 0 3px 15px rgba(0, 0, 0, 0.5);/*앨범카드에 1px 너비, 회색계열 색상을 줍니다.*/
+        }
+
+
+        .앨범이미지{
+            position: absolute;
+            top:0;
+            left:0;
+            width: inherit;
+            height: inherit;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <header>
+            <a class="브랜드" href="//soundcloud.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/26/26789.png?w=826&t=st=1686802049~exp=1686802649~hmac=947c4d2a6fd07d5af85d5b7aa64dfd374c689f3c939b600387fe9e8800b5e64d" alt="Sound Cloud">
+            </a>
+        </header>
+    <ul class="앨범리스트">
+        <li class="앨범카드">
+          <img
+            class="앨범이미지" 
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAzMjJfMjIy%2FMDAxNjc5NDkzNDE1NjAw.u_bhNy5Eqo822CytqqdOtl0F1tsOgzhh7SOWxmaVhFIg.GzYxFAH94g7wR5aGttZvrdaKxdT7V52QMuLUnRXBXnUg.JPEG.uomm38%2F%25BE%25D9%25B9%25FC%25C4%25BF%25B9%25F6.jpg&type=sc960_832"
+            alt="Tobu - Calling">
+        </li>
+        <li class="앨범카드">
+          <img
+            class="앨범이미지"
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAzMTNfMTc5%2FMDAxNjE1NjQzMjk4MTEw.wmC9cqd0xQLxMgVN78h6rRNxIgeywoFTGTDY4QvaN8wg.6-xdU1fozxGNZ5oP0_aQCTNmBEaYvleLwbBC1kuq4O0g.JPEG.sunnut_studio%2F%25B8%25F1%25BE%25F72.jpg&type=sc960_832"
+            alt="Outside Today - YoungBoy Never Broke Again">
+        </li>
+        <li class="앨범카드">
+          <img
+            class="앨범이미지"
+            src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fgigs%2FA6iu01599143954.jpg&type=sc960_832"
+            alt="Sensetive Time 179 (24.04.2017) - SENSETIVE5">
+        </li>
+        <li class="앨범카드">
+          <img
+            class="앨범이미지"
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMjhfMjQy%2FMDAxNjExODA3OTI4MjQ1.E9x6Kt5-fEEbhFe7fmeEM38sPenz31JrPuUwqHBitw8g.DdQemKTCauLQA3r8p976m7CSugG3kOlCAKUc6Pec5mgg.JPEG.dbrkdmsyge12%2F%25BE%25D9%25B9%25FC_%25B8%25F1%25BE%25F7.jpg&type=sc960_832"
+            alt="Outside Today - YoungBoy Never Broke Again">
+        </li>
+        <li class="앨범카드">
+          <img
+            class="앨범이미지"
+            src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fgigs%2FbSHUw1522133017.jpg&type=sc960_832"
+            alt="Sensetive Time 179 (24.04.2017) - SENSETIVE5">
+        </li>
+        <li class="앨범카드">
+          <img
+            class="앨범이미지"
+            src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fgigs%2FRe9u01522133043.jpg&type=sc960_832"
+            alt="Sensetive Time 179 (24.04.2017) - SENSETIVE5">
+        </li>
+      </ul>
+</body>
+</html>

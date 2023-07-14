@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{/*보더 박스로 계산되어지는 구문*/
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            /*기본 폰트 스타일 5가지 유형 중, 글자 사이 간격이 있고, 타자기로 입력한듯한 글자 사용*/
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+        img{
+            /*100%의 너비*/
+            width: 100%;
+        }
+
+        header{/*글자 가운데 정렬*/ /*상,하,좌,우 32px의 내부여백*/
+            text-align: center;
+            padding: 32px;
+        }
+
+        .wrapper {
+	    /*이 속성값만 부여해도 가로 정렬이 됩니다.*/
+        display: flex;
+        justify-content: center;
+	    /*요소 배치될 공간이 부족할 경우 단처리되는 값을 넣었습니다.*/
+        flex-wrap: wrap;
+        height: 100%;
+	    /*상,하는 0, 좌,우는 4px의 내부여백*/
+        padding: 0 4px;
+	    max-width: 2000px;
+	    /*가운데로 배치되기 위한 기본 구문을 넣었습니다.*/
+        align-items: center;
+        }
+
+        .flex {
+	    /*상,하는 0, 좌,우는 4px의 내부여백*/
+        padding: 0 4px;
+        flex: 1;
+        overflow: auto;
+	    max-width: 150px;
+        height: 100%;
+        }
+        img{
+	    margin-top: 4px;
+	    vertical-align: middle;
+
+        }
+
+        /*이 후 구문*/
+/* 반응형 레이아웃 : 네 개의 열 대신에 두 개의 열 레이아웃을 생성합니다. */
+@media (max-width: 800px) {
+    .flex {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* 반응형 레이아웃 :  두 개의 열을 옆에 두는 대신에 서로 위로 쌓는 레이아웃을 말합니다.*/
+@media (max-width: 600px) {
+    .flex {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+        /* 반응형 레이아웃1 : 네 개의 열 대신에 두 개의 열 레이아웃을 생성해보세요. */
+        /* 반응형 레이아웃2 : 두 개의 열을 옆에 두는 대신에 서로 위로 쌓는 레이아웃을 생성해보세요.*/
+    </style>
+</head>
+<body>
+    <header><h1>카드배열 레이아웃 구현해보기 with css Flexbox</h1></header>
+    <div class="wrapper">
+    <div class="flex">
+        <img src="https://plus.unsplash.com/premium_photo-1673641895483-2119e6d9fd75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1497752531616-c3afd9760a11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1579380656108-f98e4df8ea62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="">
+    </div>
+    <div class="flex">
+        <img src="https://images.unsplash.com/photo-1610629651605-0b181ad69aab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1581300134629-4c3a06a31948?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=394&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=397&q=80" alt="">
+    </div>
+    <div class="flex">
+        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=425&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1590079015089-875baa76cc8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1551336631-7de698b111f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=451&q=80" alt="">
+    </div>
+    <div class="flex">
+        <img src="https://plus.unsplash.com/premium_photo-1673455210376-fb94ce182ff4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1585936529565-1871537209e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1547407139-3c921a66005c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="">
+    </div>
+    </div>
+</body>
+</html>

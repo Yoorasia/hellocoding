@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="230628_4.css">
+    <style>
+        article{
+            margin: 0 auto;
+            padding: 30px 0;
+            width: 800px;
+            white-space: nowrap; /*줄바꿈 없이 즉, 이어지는 속성 값*/
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;/*스크롤 액션이 끝나면, 어딘가로 위치를 돌려놓을 수 있는 속성*/
+            /*scroll-snap-type : 스크롤 되는 박스에서, 스냅 포인트(위치 값)을 설정하는 css속성입니다.
+            none : 스냅 포인트 없이 기본 스크롤링 되는 상황
+            mandatory : 활성화, 가로축을 기점으로 start, end, center 위치로 이동 할 수 있습니다.
+                        세로측을 기점으로 = y
+            scroll-snap-align: start, end, center;
+            */
+        }
+        .item{
+            scroll-snap-align: center;
+            display: inline-block;/*가로 정렬*/
+            white-space: normal;
+            background-color: rgb(188, 230, 230);/*float과 clear의 관계처럼, 상위 white-space속성을 해제하는 것입니다.*/
+            overflow: hidden;
+            width: 40%;
+        }
+       .item img{
+          width: 100%;
+          height:360px;
+        }
+        p{
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body style="margin: 15px;">
+   <article>
+      <div class="item">
+         <img src="https://tinyurl.com/2uuparft" alt="" width="400px" height="auto">
+         <p>Mon</p>
+      </div>
+      <div class="item">
+         <img src="https://tinyurl.com/2p83n3mp" alt="" width="400px" height="auto">
+         <p>Tue</p>
+      </div>
+      <div class="item">
+         <img src="https://tinyurl.com/2p84xy6z" alt="" width="400px" height="auto">
+         <p>Wed</p>
+      </div>
+      <div class="item">
+         <img src="https://tinyurl.com/2fxhdja5" alt="" width="400px" height="auto">
+         <p>Thu</p>
+      </div>
+      <div class="item">
+         <img src="https://tinyurl.com/ywmv8xyw" alt="" width="400px" height="auto">
+         <p>Fri</p>
+      </div>
+      <div class="item">
+        <img src="https://tinyurl.com/7p47c5yc" alt="" width="400px" height="auto">
+        <p>Sat</p>
+     </div>
+     <div class="item">
+        <img src="https://tinyurl.com/2vc8s9jw" alt="" width="400px" height="auto">
+        <p>Sun</p>
+     </div>
+   </article>
+</body>
+</html>

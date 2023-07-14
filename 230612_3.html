@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rwd1</title>
+    <style>
+        #container{
+            width: 940px;
+            margin: 10px auto;
+            padding: 20px;
+            border: 2px solid rebeccapurple;
+            overflow: hidden;
+        }
+        header{
+            padding: 20px;
+            border: 1px solid red;
+            margin-bottom: 20px;
+        }
+        section{
+            width: 550px;
+            border: 1px solid blue;
+            padding: 20px;
+            margin-bottom: 20px;
+            float: left;
+        }
+        aside{
+            width: 285px;
+            border: 1px solid yellowgreen;
+            float: right;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        footer{
+            clear: both;
+            padding: 20px;
+            border: 1px solid palevioletred;
+        }
+        @media screen and (max-width:480px){
+            #container{
+                width: auto;
+            }
+            section{
+                width: auto;
+                float: none;
+            }
+            aside{
+                width: auto;
+                float: none;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>반응형 웹 구조 간단하게 짜보기</h1>
+        </header>
+        <section>
+            <h2>콘텐츠 제목</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore hic reprehenderit iure nihil deserunt voluptatum quam laudantium vel nulla at tenetur necessitatibus magnam aliquid quae impedit dolorem ab quaerat, ut accusamus, sequi architecto molestias soluta. Nostrum libero dolorem hic molestiae, eum consequuntur optio doloremque facere excepturi! Voluptates eveniet animi autem praesentium cumque officiis iusto natus, obcaecati corrupti, dolores aspernatur ex.</p>
+        </section>
+        <aside>
+            <h2>사이드 제목</h2>
+            <ul>
+                <li>lorem</li>
+                <li>ipsum</li>
+                <li>dolor</li>
+            </ul>
+        </aside>
+        <footer>
+            <p>copyright</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./230710_js1.js"></script>
+    <style>
+    table { border-collapse: collapse; }
+    th, td { border: solid 1px gray; }
+    th { padding: 5px; background-color: #eeeeee}
+    td { padding:5px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        var contents = "";
+        contents += "<h3>구구단표</h3>";
+        contents += "<table>"
+        contents += "<tr>"
+        contents += "<th>2단</th><th>3단</th><th>4단</th><th>5단</th><th>6단</th><th>7단</th><th>8단</th><th>9단</th>";
+        contents += "</tr>";
+        
+        for (var i=2; i<=9; i++) {
+            contents += "<tr>"
+            for (var j=1; j<=9; j++) {
+                document.write(i + " x " + j + " = " + (i*j) + "<br>");    
+            }
+            contents += "</tr>"; 
+        }
+        contents += "</table>";
+    
+        document.getElementById("result").innerHTML = contents;
+    </script>
+</body>
+</html>

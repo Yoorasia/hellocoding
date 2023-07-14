@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="./230628.css">-->
+    <style>
+        body{}
+article{display: flex;
+    align-items: center;
+    width: 650px;
+    margin: 50px auto;
+}
+article:nth-child(2n){
+    flex-direction: row-reverse;
+}
+.pic{
+    width: 50%;
+    height: auto;
+}
+.text{
+    width: 50%;
+    padding: 0 30px;
+}
+img{
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body style="margin: 15px;">
+   <article>
+      <div class="pic">
+         <img src="http://tiny.cc/oif8vz" alt="강아지가 웃는 사진" width="300px" height="auto">
+      </div>
+
+      <div class="text">
+         <h2>상하 중앙에 배치합니다</h2>
+         <p>사진과 가로로 배열한 문자을 상하 중앙에 배치합니다. 길이가 짧은 문장을 여러 위치에 배치할 때, 전체적인 균형을 잡는 데 효과적입니다.</p>
+         <button>바로가기</button>
+      </div>
+   </article>
+   <article>
+    <div class="pic">
+       <img src="http://tiny.cc/oif8vz" alt="강아지가 웃는 사진" width="300px" height="auto">
+    </div>
+
+    <div class="text">
+       <h2>상하 중앙에 배치합니다</h2>
+       <p>사진과 가로로 배열한 문자을 상하 중앙에 배치합니다. 길이가 짧은 문장을 여러 위치에 배치할 때, 전체적인 균형을 잡는 데 효과적입니다.</p>
+    </div>
+ </article>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result::after{
+            content: "";
+        }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        var contents = "";
+        var n = 1;
+        while (n <= 6){
+            if(n%2 == 1) {//나머지 값이 홀수 1로 떨어진다면..
+                contents += "<img src='./스타일/img/ani_spade.png'>";
+            }
+            else{
+                contents += "<img src='./스타일/img/bg_animation.png'>";
+            } 
+            n++;
+        }
+        document.getElementById('result').innerHTML = contents;
+    </script>
+</body>
+</html>

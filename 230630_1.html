@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/sanitize.css">
+    <title>이미지를 동글동글하게 만들어보기</title>
+    <style>
+        *{margin: 0 auto;
+            align-items: center;
+        }
+        img{
+            border-radius: 65% 35% 70% 30% / 57% 57% 43% 43%;
+            width: 50%;
+        }
+        .hog{
+            width: 100%;
+            align-items: center;
+            display: flex;
+        }
+        .bgclip{
+            background-clip: text; /*포토샵의 클리핑마스크같은 역할을 css로 구현 할 수 있음*/
+            -webkit-background-clip: text;
+            background-image: url(https://tinyurl.com/39cu9pcz);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: rgba(0, 0, 0, 0);
+            font-size: 100px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-emphasis: sesame;
+            text-decoration: #123456 wavy underline;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="hog">
+        <img src="https://tinyurl.com/2p9xhzas" alt="">
+    </div>
+    <div class="bgclip">
+        Friday
+    </div>
+</body>
+</html>

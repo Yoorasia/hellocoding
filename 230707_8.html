@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap{
+            height: 500px;
+            margin: 0 auto;
+            border: 4px solid #000;
+        }
+        /*
+        screen : 컴퓨터 화면
+        print : 인쇄장치
+        tv : 티비
+        handheld : pda 손으로 들고 다닐 수 있는 정도의 디바이스
+        */
+        /*반응형 너비를 만들어 주는 쿼리문 
+        작은 화면 부터~ 큰 화면 순으로 비율*/
+        @media all and (min-width:320px){
+            #wrap{
+                width:30%;
+                background-color: rgb(126, 209, 230);
+            }
+        }
+        @media all and (min-width:768px){
+            #wrap{
+                width:60%;
+                background-color: rgb(216, 106, 155);
+            }
+        }
+        @media all and (min-width:1024px){
+            #wrap{
+                width:90%;
+                background-color: rgb(157, 127, 255);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+</body>
+</html>

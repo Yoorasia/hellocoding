@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //이중 for문 : for문 안에 또 for문 넣어 반복구조 만들기
+        for(var i = 2; i<=9; i++){ //9라는 숫자까지 반복 <--for문 자체를 반복
+            for(var j = 1; j<=9; j++){ //세부적인 기능에 대한 반복
+                document.write( i + "x" + j "=" + (i*j) + "<br>");
+            }
+        }
+        /*
+        for (var a = 1; a<=5; a++){
+            for (var b = 1; b<=20; b++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        */
+    </script>
+</body>
+</html>
