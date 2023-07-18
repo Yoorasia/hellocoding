@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./"></script>
+    <title>자바스크립트 구문 || 제이쿼리 구문</title>
+<script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p>단락입니다.</p>
+    <button>배경 색상을 변경해봅시다.</button>
+    <script>
+        //자바스크립트 DOM구조의 document객체로, 특정 부분 배경색 변경하기
+        /*document.querySelector("button").addEventListener('click', function(){
+            document.querySelectorAll("p").forEach(function(p){
+                p.style.backgroundColor = "pink";
+            });
+        });*/
+        //제이쿼리
+        $('button').click(function(){
+            $('p').css("background-color", "pink");
+        });
+    </script>
+</body>
+</html>

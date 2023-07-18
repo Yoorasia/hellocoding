@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./"></script>
+    <title>Document</title>
+</head>
+<body>
+   <button onclick="javascript:location.reload();">재호출(F5)</button><br>
+   <button onclick="javascript:location.replace('https://www.youtube.com/watch?v=V3auzv98JYI');">다른 화면으로 전환</button><br>
+   <button onclick="javascript:location.assign('https://www.naver.com');">이동</button>
+    <script>
+        document.write(location.href + "<br>");//전체 웹주소
+        document.write(location.hostname + "<br>");//WWW.honggildon.com
+        document.write(location.protocol + "<br>");//httP://
+        document.write(location.port + "<br>");//port num : 8080
+        document.write(location.search + '<br>');// ?search=abpage=2
+        document.write(location.hash);// #section3
+    </script>
+</body>
+</html>
