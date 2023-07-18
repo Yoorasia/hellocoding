@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: yellow;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset id="q1"><legend>문제 1</legend>
+        <script>
+            var member = {
+            id: "jia_jo",
+            name: "조지아",
+            email: "jia_jo@newsync.com"
+        };
+        document.write(member.id+"<br>");
+        document.write(member.name+"<br>");
+        document.write(member.email);
+        </script>
+    </fieldset>
+    <fieldset id="q2"><legend>문제 2</legend>
+        <script>
+                    function Employee(name, age, position, salary) {
+        this.name = name;
+        this.position = position;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    var person1 = new Employee("안진수", 52, "부장", 5000000);
+    var person2 = new Employee("홍지영", 28, "사원", 3000000);
+
+    var list = "";      
+    list += "1. " + person1.name + " : ";
+    list += person1.position + ", ";
+    list += person1.age + ", ";
+    list += person1.salary;
+    list += "<br>";
+
+    list += "2. " + person2.name + " : ";
+    list += person2.position + ", ";
+    list += person2.age + ", ";
+    list += person2.salary;
+    list += "<br>";
+
+    document.write(list);
+        </script>
+    </fieldset>
+    <fieldset id="q3"><legend>문제 3</legend>
+        <button onclick="changeTextColor(this)">글자 색상 변경하기</button>
+        <button onclick="changeBgColor(this)">배경 색상 변경하기</button>
+        <script>
+            function changeTextColor(obj) {
+                obj.style.color = "red";
+            }
+        
+            function changeBgColor(obj) {
+                obj.style.backgroundColor = "pink";
+            }
+            </script>
+    </fieldset>
+        <button onclick="movePage()">네이버로 이동
+        <script>
+            function movePage() {
+                location.movePage("https://www.naver.com");
+            }
+        </script></button>
+</body>
+</html>
