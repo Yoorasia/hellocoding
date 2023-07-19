@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //D.O.M = Document Object Model 문서 객체 모델 (웹문서HTML)
+        //element = 요소( = 태그, 속성, 값)을 만들어주거나, 삭제하거나, 수정하거나, 업데이트하거나 = 반응을 일으키려고 만들어졌습니다.
+        //Document = 상위객체
+        //HTML = 상위 요소 head, body가 그 다음,
+        //head = title(텍스트), meta
+        //body = h1~6, p, div(텍스트)
+        //요소 = 노드
+        //자주 볼 수 있는 메서드
+        //getElementByID() : id속성이 ???인 요소를 호출
+        //getElementsByClassName() : class명이 ???인 요소들을 호출
+        //getElementsByTagName() : 직접적인 태그명으로 요소들을 호출
+        //getElementsByName() : 네임 속성이 ???인 요소들을 호출
+        //querySelector('li > a') : CSS 선택하는 것처럼 표기해서 요소를 호출 - 첫번째 요소
+        //querySelectorAll() : CSS 선택하는 것처럼 표기해서 요소를 호출 - 그 요소 전부 다
+        window.onload = function(){
+            let list1 = document.querySelector('#box1 > ul > li');
+            let list2 = document.querySelectorAll('#box2 > ul > li');
+            document.write(list1);
+            document.write(list2);
+        }
+    </script>
+    <div id="box1">
+        <ul>
+            <li>text1</li>
+            <li>text2</li>
+            <li>text3</li>
+        </ul>
+    </div>
+        <div id="box2">
+        <ul>
+            <li>text4</li>
+            <li>text5</li>
+            <li>text6</li>
+        </ul>
+    </div>
+</body>
+</html>

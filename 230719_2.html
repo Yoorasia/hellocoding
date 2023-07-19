@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Document 객체에서 볼 수 있는 '상대경로' 메서드들...
+        //parentNode : 선택된 요소의 부모요소(노드)들 호출
+        //childNode : 선택된 요소의 자식요소(노드)들 호출
+        //children : 선택된 요소의 자식요소(노드)들 호출
+        //nextSibling : 선택된 요소의 다음형제요소를 호출
+        //previousSibling : 선택된 요소의 이전형제요소를 호출
+        //firstChild : - first-child() 선택된 요소의 자식들중 첫째요소를 호출
+        //lastChild : - last-child() 선택된 요소의 자식들중 막내요소를 호출
+        //기타 메서드
+        //id : id가 맞으면 다 호출
+        //className : className가 맞으면 다 호출
+        window.onload = function(){
+            var gnb = document.getElementById("gnb");
+        }
+    </script>
+        <div>
+            <nav id = "gnb">
+                <ul>
+                    <li class ="first">text1</li>
+                    <li>text2</li>
+                    <li>text3</li>
+                </ul>
+            </nav>
+        </div>
+</body>
+</html>
