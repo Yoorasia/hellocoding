@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //내장 객체 시리즈...
+            //String 객체 - (.length : 문자열의 개수를 취득해서 보여주는 속성)
+                //javascript > index번호를 매김(배열로 문자를 세아림) >     
+                //.charAt() -  index 번호랑 문자를 매치시켜서, 번호를 나타내주는 메서드
+                //.indexOf() - [색인] 내가 찾고자 하는 문자를 검색대상문자열의 왼쪽부터 세아려서 번호를 나타내주는 메서드 -1
+                //.lastIndexOf() - 검색대상문자열의 오른쪽부터 세아림 번째의 번호를 알려줌.
+                //.includes() - 2015년도에 생긴 메서드, 내가 찾고자 하는 문자열이 있으면 참, 없으면 거짓으로 나타내줌. 
+                //.subtring(4, 7) - 내가 나타내고자 하는 문자열 범위 선택
+                //.substr(4, 7) - 비슷함
+                //.toLowerCase() - 소문자로 대상이 되는 문자열을 변환시켜줌
+                //.toUpperCase() - 대문자로 대상이 되는 문자열을 변환시켜줌
+                //.concat() - java  query 두개의 문자열을 엮어주는 역할을 함.
+                //.replace() - 문자 java가 들어있는 위치에 query라고 하는 문자로 바꿔줄 수 있음.
+                //.trim() - web site 공백을 제거    
+            //Array 객체
+            //Math 객체
+            //Date 객체
+            //정규표현식() 객체 <-- 중급 난이도 ★★★★☆
+            //Map 객체 = 2015년 이후에 생김 
+            //Set 객체 = 2015년 이후에 생김
+            //Event 객체
+            //2015년도 = ecma script6 = 모던자바스크립트 = 라이브러리 체계 구축*
+
+            let str = 'Javascript';
+            document.write('charAt(0):' + str.charAt(0) + "<br>");
+            document.write('indexOf(\'a\'):' + str.indexOf('a') + "<br>");
+            document.write('lastIndexOf(\'t\'):' + str.lastIndexOf('t') + "<br>");
+            document.write('includes(\'script\'):' + str.includes('script') + "<br>");
+            
+            function displayRoad(){
+                let str_a = 'https://www.naver.com/';
+                let resultDiv = document.getElementById('result');
+                
+                resultDiv.innerHTML += '섭스트링(0 , 4) :' + str_a.substring(0, 4) + '<br>';
+                resultDiv.innerHTML += '섭스트링(7) :' + str_a.substring(7) + '<br>';
+            } 
+    </script>
+    <button onclick="displayRoad()">클릭하면 나와라..</button>
+    <div id = "result"></div>
+</body>
+</html>

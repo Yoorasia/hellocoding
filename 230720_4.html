@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //BOM구조에 들어있는 최상위 객체
+            //JS내장객체 => 다른 객체들에 엮어 사용됨.<br>
+                //이벤트 객체
+        window.onload = function() {
+            var btn = document.getElementById('btn');
+            function view(){
+                alert('ok');
+            }
+            btn.addEventListener('click',view);
+        }
+    </script>
+    <button id="btn">클릭</button>
+</body>
+</html>
