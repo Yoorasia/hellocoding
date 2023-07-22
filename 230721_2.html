@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*function sibling(Bro){
+            alert( Bro + 'in library');
+        }
+
+        sibling('hello');*/
+
+        /*function get(){
+            return "hello in library";    
+        }
+
+        var Bro = get();
+        alert(Bro);*/
+        // 똑같을 결과를 도출할 수 있는데, return??
+        // 값 읽는 것을 조금 더 최단 경로
+        // 복잡한 구문에서는, return 값 계산이 오류가 정상 작동을 할 수 있도록 함축적인 명령을 내림.
+    
+        //상황 1 : 과일가게 주인이 보유중인 과일을 선택하도록 고객한테 권유하는 중입니다.
+        //리턴 함수를 사용할 경우 : 주인이 (고객이)선택한 과일을 [반환]하는 결과
+        //콜백 함수를 사용할 경우 : 포장이 끝마쳐지면, [콜백]이 시행됩니다. '포장완료'라고 하고 사과가 나오는 결과
+
+        /*function selectFruit(gwailName){
+            //매개변수 == 인자
+            document.write('주 : 어떤 과일 찾으세요?');
+            document.write('객 :' + gwailName + "을 좀 주시겠어요, 맛있어 보이네요.");
+            
+            return gwailName; //다 끝났니? 그럼 이만, 또보자. 빠져나가요.
+        }
+
+        let getFruit = selectFruit('스타후르츠');
+        alert('고객님, 선택하신' + getFruit + "나왔습니다.");*/
+
+
+        function packFruit(gwailName, callback){
+            document.write(gwailName + "를 포장중....."); //포장작업중
+            
+            // 포장이 끝나게 되면, 콜백 함수를 부릅니다.
+            callback(); 
+        }
+
+        function alyeozum (){
+            document.write("포장이 완료되었습니다.");
+        }
+
+        packFruit('바나나', alyeozum);
+    </script>
+</body>
+</html>
