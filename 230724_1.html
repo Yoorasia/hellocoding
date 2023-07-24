@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<script src="./jquery-3.7.0.min.js"></script>-->
+    <script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    //전체 선택자
+    $(document).ready(function(){
+        $("*").css({"background-color": "pink", "font-size": "20px", "font-family": "Impact"});
+    });
+        </script>
+    </head>
+<body>
+    <script>
+        //제이쿼리 : DOM = HTML 페이지(웹문서) 중점으로 JS를 라이브러리 시켜놓은 것.
+        //스크립트 기초 지식, HTML, CSS를 1번 보고 와야 제이쿼리를 사용할 수 있다.
+        // $(selector).method();
+        //제이쿼리는 저 위 수식과 같이 사용하고, selector(선택자) 제어(action)를 하는 원리입니다.
+        //$("p").hide(); = html 내에 있는 p태그란 녀석은 전부 호출해서, 숨긴다.
+        //$("section").fadeIn(); = html 내에 있는 section태그란 녀석은 전부 호출해서, 부드럽게 나타냅니다.
+
+        //제이쿼리의 선택자들...
+        //CSS에서 볼 수 있는 선택자들과 같은 맥락이다.
+        //전체 선택자 *
+        //요소 = 태그 선택자 <header>, <section>, <p>
+        //아이디 선택자 #abc
+        //클래스 선택자 .carrot
+        //자식 선택자 div > a
+        //형제 선택자 div + div , li ~ li
+        //후손 선택자 div a
+        //다중 선택자 section, p, div, article, figure
+        //속성[어트리뷰트] 선택자 [alt] 
+        //가상 선택자 li:even  
+        //종속 선택자 p#bold div.pink
+
+        //제이쿼리의 [효과]메소드들...
+        //hide();메소드
+        //show();메소드
+        //fadeIn();메소드
+        //fadeOut();메소드
+        //slideDown();메소드
+        //slideUp();메소드
+        //slideToggle();메소드
+        //toggle();메소드
+        //animate();메소드
+        //stop();메소드
+        //delay();메소드
+
+        //제이쿼리의 [이벤트]메소드들...
+        //click();메소드
+        //mouseUp();메소드
+        //mouseDown();메소드
+        //hover();메소드
+        //focus();메소드
+        //blur();메소드
+        //scroll();메소드
+    </script> 
+        <h1> Hello Jquery</h1>
+        <p>"제이쿼리라는 녀석을 살펴봅시다."</p>
+    </body>
+</html>
