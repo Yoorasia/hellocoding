@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./230725.js"></script> 
+<script>
+$(document).ready(function(){
+    /*$("ul b").css({
+        "background-color" : "skyblue",
+        "padding" : "3px",
+        "border" : "2px solid blue"    
+    });*/
+
+    /*$("header + ul").css({
+        "background-color" : "skyblue",
+        "padding" : "3px",
+        "border" : "2px solid blue"    
+    });*/
+
+    /*$("li.list").css({
+        "background-color" : "skyblue",
+        "padding" : "3px",
+        "border" : "2px solid blue",
+        "font-style" : "italic"    
+    });*/
+
+    /*$("[target='_parent']").css({
+        "background-color" : "yellow",
+        "padding" : "3px",
+        "border" : "2px solid blue",
+        "font-style" : "italic"
+    });*/
+
+    //$(".green") //ddoza_230725
+    $("[class* ='green']").css({
+        "font-weight" : "bold",
+        "background-color" :"green"
+    });
+});
+
+</script>
+</head>
+<body>
+    <header>
+        <h1 class ="green 9">제이쿼리를 시작합니다.</h1>
+    </header>
+    <ul class = "list">
+        <li class = "list"><b>제이쿼리</b>는 사용자친화적인 라이브러리입니다.</li>
+        <li><b>제이쿼리</b>는 쉬운 라이브러리입니다.</li>
+        <li>웹 문서에 조금 더 쉬운 스크립팅을 하려면, <b>제이쿼리</b>를 사용합시다~</li>
+    </ul>
+    <footer>
+        <p>희망의 날개를 펼쳐봅시다</p>
+        <a href="http://www.naver.com" target="_parent">네이버</a>
+    </footer>
+</body>
+</html>
