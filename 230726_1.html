@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //가상선택자중 짝수를 호출
+        /*$("a:even").css({
+            "font-style": "italic", "background-color" : "pink", "padding" : "3.3pt"
+        });
+            //가상선택자중 홀수를 호출
+        $("a:odd").css({
+            "font-style": "italic", "background-color" : "skyblue", "padding" : "3.3pt"
+        });
+        $("article :eq(1)").css({
+            "font-style": "italic", "background-color" : "skyblue", "padding" : "3.3pt"
+        });
+        $("a:gt(2)").css({
+            "font-style": "italic", "background-color" : "skyblue", "padding" : "3.3pt"
+        });
+        $("a:lt(2)").css({
+            "font-style": "italic", "background-color" : "pink", "padding" : "3.3pt"
+        });
+        $(".esipyuk:not(h3)").css({
+            "font-style": "italic", "background-color" : "pink", "padding" : "3.3pt"
+        });*/
+        $(".latte").slideUp(3000);
+        $("a:animated").css({
+            "font-style": "italic", "background-color" : "pink", "padding" : "3.3pt"
+        });
+    });
+    </script>
+</head>
+<body>
+    <section>
+        <h2 class="esipyuk">제이쿼리 정복을 향하여</h2>
+        <a href="#" class="latte">카페라떼</a>
+        <a href="#">소이라떼</a>
+        <a href="#">돌체라떼</a>
+    </section>
+    <section>
+        <article>
+            <h3>제이쿼리 선택자의 마지막 부분을 보고 있습니다.</h3>
+            <a href="#">녹차라떼</a>
+            <a href="#">고구마라떼</a>
+            <a href="#">흑임자라떼</a>
+        </article>
+    </section>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="./230725.js"></script>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+#slider {
+    position: relative;
+    overflow: hidden;
+    margin: 50px auto 0 auto;
+}
+#slider ul {
+    position: relative;
+}
+#slider ul li {
+    position: relative;
+    float: left;
+    width: 800px;
+    height: 533px;
+}
+#slider ul li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*
+background-size : cover 과 object-fit : cover의 차이
+background : 태그의 배경 이미지를 크기 지정하는데 사용
+            부모 크기를 먼저 보고 자신이 들어갈 공간을 찾아 들어감
+            비율을 완전히 무시되는 형태가 아니어서 늘어나지 않는 버그가 생김
+object-fit : 자기 자신의 사이즈와, 부모 요소의 사이즈 공간을 비교해서
+            부모사이즈 공간만큼 늘어나줍니다.
+*/
+a.prev, a.next {
+    position: absolute;
+    top: 40%;
+    z-index: 999;
+    display: block;
+    padding: 4% 3%;
+    background: #333333;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.6;
+    cursor: pointer;
+}
+a.next {
+    right: 0;
+}   
+</style>
+<script>
+$(document).ready(function () {
+    var slideCount = $("#slider ul li").length;
+    var slideWidth = $("#slider ul li").width();
+    var slideHeight = $("#slider ul li").height();
+    var slideTotalWidth = slideCount * slideWidth;
+    
+    $("#slider").css({ width: slideWidth, height: slideHeight });     
+    $("#slider ul").css({ width: slideTotalWidth, marginLeft: - slideWidth }); 
+    $("#slider ul li:last-child").prependTo("#slider ul");
+    
+        //슬라이더가 오른쪽으로 이동하는 함수를 제작해봅니다.
+        function right(){
+            //이미지가 있는 영역을 선택자로 불러와서 그 태그의 left속성을 애니메이션 메소드 부여
+            $("#slider ul").animate({
+                left: -slideWidth
+            }, 300, function(){
+                //슬라이더의 여러 이미지들 중 첫번째 이미지를 맨 뒤로 보내줍니다
+                $("#slider ul li:first-child").appendTo("#slider ul");
+                $("#slider ul").css("left", "0");
+            });
+        };
+        //슬라이더가 왼쪽으로 이동하는 함수도 제작해봅니다.
+        function left(){
+            $("#slider ul").animate({
+                left: +slideWidth
+            }, 300, function(){
+                //슬라이더의 여러 이미지들 중 첫번째 이미지를 맨 뒤로 보내줍니다
+                $("#slider ul li:last-child").prependTo("#slider ul");
+                $("#slider ul").css("left", "0");
+            });
+        };
+        //prev 요소를 클릭하면 (페이지가 왼쪽으로 넘어가는 함수)를 호출해오는 구간
+        $("a.prev").click(function(){
+        "함수이름(왼쪽으로 넘어가는)"
+        });
+
+        //prev 요소를 클릭하면 (페이지가 오른쪽으로 넘어가는 함수)를 호출해오는 구간
+        $("a.next").click(function(){
+        "함수이름(오른쪽으로 넘어가는)"
+        });
+});      
+</script>
+</head>	
+<body>
+    <div id="slider">
+    <a href="#" class="next">&gt;</a>
+    <a href="#" class="prev">&lt;</a>
+    <ul>
+        <li><img src="https://images.unsplash.com/photo-1516368703560-076d597296a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80"></li>
+        <li><img src="https://images.unsplash.com/photo-1626118788936-29dc02466e96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"></li>
+        <li><img src="https://images.unsplash.com/photo-1633158829799-96bb13cab779?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"></li>
+        <li><img src="https://images.unsplash.com/photo-1604603555394-cd847c16d27f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"></li>
+        <li><img src="https://images.unsplash.com/photo-1586102489027-4ca36ffd4423?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"></li>
+    </ul>  
+    </div>
+</body>  
+</html>
