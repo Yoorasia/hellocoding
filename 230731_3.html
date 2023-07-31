@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="js/jquery-3.6.0.min.js"></script>
+<title>키보드 이벤트 살펴보기</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p:eq(0) input").keydown(function(){
+        $(this).css("background-color", "cadetblue");
+    });
+    $("p:eq(0) input").keyup(function(){
+        $(this).css("background-color", "pink");
+    });
+});
+</script>
+</head>	
+<body>
+    <p>- 아이디 : <input type="text"></p>
+    <p>- 비밀번호 : <input type="password"></p>
+</body>  
+</html>

@@ -1,0 +1,24 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <title>Document</title>
+        <script>
+            $(document).ready(function() {    
+                $("#btn").click(function() {
+                    $("#show").text("안녕하세요.");
+                });
+            });
+            </script>
+    </head>
+    <body>
+        <button id="btn">여기는 버튼입니다</button>
+        <p id="show"></p>
+    </body>
+    </html>
+        <!--이벤트 :
+        //웹 페이지에서 여러분들이 마우스나, 키보드, 디지타이저 펜, 터치포인트 같은 물리 입력장치로 조작했을때, 발생되는 사건
+        //마우스로 웹페이지의 무언가(버튼)을 누르면 = 클릭이라는 이벤트가 발생
+        //이벤트 메서드 : 사건을 어떠한 상태로 처리해주는 함수 -->

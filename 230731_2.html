@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리의 - 마우스 이벤트 알아보기</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#show").text("이 이벤트는 클릭했을때 텍스트가 나타납니다.");
+            });
+
+            $("#btn2").dblclick(function(){
+                $("#show2").text("이 이벤트는 더블 클릭했을때 텍스트가 나타납니다.");
+            });
+
+            $("#box").mouseenter(function(){
+                $("#show2").text("마우스 포인트가 들어왔다!!!");
+            });
+
+            $("#box").mouseleave(function(){
+                $("#show2").text("마우스 포인트가 나갔다!!!");
+            });
+        });
+    </script>
+    <style>
+        #box { width : 120px;    height: 30px; 
+            margin-top: 10px;
+            background-color: yellow; }
+    </style>
+</head>
+        <body>
+            <button id="btn1">클릭</button>
+            <button id="btn2">더블 클릭</button>
+            <div id="box">div 요소</div>
+            
+            <p id="show"></p>
+            <p id="show2"></p>
+        </body>  
+        </html>

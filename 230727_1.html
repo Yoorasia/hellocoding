@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <title>Document</title>
+    <style>
+    :root {
+        --font:white;
+        --navbg:rgb(43, 43, 43);
+        --blue:midnightblue;
+        
+    }
+    header{
+        background: var(--navbg);
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        background: url(./);
+    }
+    header .wrapper{
+        display: flex;
+        justify-content: space-between;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    header a{
+        color: var(--font);
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+        .btn-menu{
+            background: var(--navbg);
+            position: absolute;
+            top:12px;
+            right:12px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color:var(--font);
+            padding: 1rem 1rem;
+        }
+        .main-nav{
+            background: var(--navbg);
+            width: 0%;
+            z-index: 2;
+            top: 50px;
+            right:0;
+            overflow: hidden;
+            list-style-type: none;
+            transition-duration: 1s;
+            position: absolute;
+        }
+        .main-nav li{
+            text-align: center;
+            margin: 2rem 0;
+            color: var(--font);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            cursor: pointer;
+        }
+        .main-nav a{
+            display: block;
+        }
+        .main-nav.open-menu{
+            width: 100%;
+        }
+        @media(min-width:600px){
+            a:hover{
+                transition-duration: 1s;
+                color: var(--blue);
+            }
+            .btn-menu{display: none;}
+            .main-nav{display: flex; width: 100%; position: static;}
+            .main-nav li{margin: 0 0 0 2rem;}
+        }
+        .logo{
+            float: left;
+        }
+        .btn-menu{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <a class="logo" href="#hero">LOGO</a>
+            <nav>
+                <button class="btn-menu">Menu</button>
+                <ul class="main-nav">
+                    <li a href="#about">About</li>
+                    <li a href="#news">News</li>
+                    <li a href="#speakers">Speakers</li>
+                    <li a href="#ticket">Ticket</li>
+                </ul>
+            </nav>
+    </div>
+    </header>
+    <!--자바스크립트 자리..-->
+    <script>
+        //btn-menu, 즉 버튼을 변수 박스로 넣는다.
+        const btn = document.querySelector('.btn-menu');
+        //main-nav, 즉 메뉴를 변수 박스로 넣는다.
+        const nav = document.querySelector('.main-nav');
+        //이벤트를 걸어준다 (클릭종류)
+        //function(){}); -> () =>
+        btn.addEventListener('click', () => {
+            //클래스를 하나 추가해서(오픈) 나타냈다, 숨겼다 시킨다.
+            nav.classList.toggle('open-menu');
+
+            //만일, btn 내용이 Menu라면,'Close'로 변경한다.
+            if (btn.innerHTML === 'Menu'){
+                btn.innerHTML = 'Close';
+            } //그렇지 않다면, 'Menu'로 돌리시오.
+            else {
+                btn.innerHTML = 'Menu';
+            }
+        });
+        
+    </script>
+</body>
+</html>
