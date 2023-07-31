@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").on("click", function(){
+                $("p").addClass("berry");
+            });
+        });
+    </script>
+    <style>
+        .berry{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        이벤트 중, .on()이라는 메서드에 대해...
+        .on이라는 이벤트는 핸들링 하는 곳에 등록하는 것이다.
+        내가 넣고자 하는 메소드들을 여러가지 합쳐 .on이 할당받게 한 뒤 통합하여 호출할 수 있다.
+    -->
+    <p>수신제가치국평천하</p>
+    <button>클릭!</button>
+</body>  
+</html>
