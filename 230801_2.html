@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리-다수의 이벤트 등록하여 사용하기</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "pink");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", "red");
+                },
+                click: function(){
+                    $(this).css("background-color", "yellowgreen");
+                },
+                dblclick: function(){
+                    $(this).css("background-color", "skyblue");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>좋아하는 명언 : "NO PAIN NO GAIN"</p>
+</body>
+</html>
