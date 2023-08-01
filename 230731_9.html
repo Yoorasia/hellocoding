@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 슬라이드 만들기 : 손코딩 버전</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //슬라이더를 작업하기 위한 변수 선정
+            //슬라이더의 총 크기, 일반적인 슬라이더 한 사진의 가로 세로의 크기
+            var slideCount = $("#slider ul li").length;//슬라이드의 번호 카운트 해주는 녀석
+            var slideWidth = $("#slider ul li").width(); //슬라이드의 가로 길이 녀석
+            var slideHeight = $("#slider ul li").height(); //슬라이드의 세로 길리 녀석
+            var totalWidth = slideCount * slideWidth; //슬라이드의 전체 가로 길이 녀석
+
+            $("#slider").css({ width: slideWidth, height: slideHeight });     
+			$("#slider ul").css({ width: slideTotalWidth, marginLeft: - slideWidth }); 
+			$("#slider ul li:last-child").prependTo("#slider ul");
+        
+        function moveLeft() {
+            $("#slider ul").animate({
+                left: + slideWidth
+            }, 300, function () {
+                $("#slider ul li:last-child").prependTo("#slider ul");
+                $("#slider ul").css("left", "0");
+            });
+        };
+
+        function moveRight(){
+            $("#slider ul").animate({
+                left: - slideWidth
+            }, 300, function () {
+                $("#slider ul li:first-child").appendTo("#slider ul");
+                $("#slider ul").css("left", "0");
+            });
+		};
+        });
+        
+    </script>
+    <style>
+        /*전체 영역에 대한 세팅*/
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        li{list-style-type: none;}
+        /*메인 슬라이더 부분 디자인*/
+        #slider{
+            position: relative;
+            overflow: hidden;
+            margin: 50px auto 0 auto;
+        }
+        #slider a{text-decoration: none;}
+        /*메인 슬라이더 부분의 이미지박스(ul) 디자인*/
+        #slider ul {
+            position: relative;
+        }
+        /*메인 슬라이더 부분의 이미지박스(ul)의 이미지영역(li) 디자인*/
+        #slider ul li {
+            position: relative;
+            float: left;
+            width: 800px;
+            height: 533px;
+        }
+        /*메인 슬라이더 부분의 이미지박스(ul) 위에 엊혀질 버튼 형태의 (a)태그 디자인*/
+        a.prev, a.next {
+            position: absolute;
+            top: 40%;
+            z-index: 999;
+            display: block;
+            padding: 4% 3%;
+            background: #333333;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.6;
+            cursor: pointer;
+        }
+        /*메인 슬라이더 부분의 이미지박스(ul) 위에 엊혀질 버튼 형태의 (a)태그 중, 오른쪽 위치 조정*/
+        a.next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <a href="#" class="next">👉</a>
+        <a href="#" class="prev">👈</a>
+        <ul>
+            <li><img src="./images/image1.jpg" alt="빤짝이1"></li>
+            <li><img src="./images/image2.jpg" alt="빤짝이2"></li>
+            <li><img src="./images/image3.jpg" alt="빤짝이3"></li>
+            <li><img src="./images/image4.jpg" alt="빤짝이4"></li>
+            <li><img src="./images/image5.jpg" alt="빤짝이5"></li>
+        </ul>
+    </div>
+</body>  
+</html>
