@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴중 아코디언메뉴 만들어보기_html버전</title>
+    <style>
+        /*
+        details, summary : 아코디언 메뉴를 만드는 HTML5-시멘틱 태그들
+        첫째 자식을 챙기는 부모역할 : details
+        첫째summary : 제목용(실제 제목으로 보이는)
+        */
+        details{
+            margin: 0 auto;
+            width: 500px;
+        }
+        /*첫째summary*/
+        summary{
+            display: flex; /*▶모양이었던 것을 다른 모양으로*/
+            align-items: center;
+            justify-content: space-between;/*질문과 모양이 양 끝에 배치*/
+            background-color: pink;
+            font-size: large;
+            padding: 30px;
+            cursor: pointer;
+        }
+        summary::after{
+            content: "+";
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            transition: transform .5s;
+            padding-bottom: 5px;
+        }
+        summary:hover, details[open] summary{
+            background-color: palevioletred;
+            color: white;
+        }
+        details[open] summary::after{
+            transform: rotate(45deg);
+        }
+        .answer{
+            padding: 30px;
+            line-height: 1.6;
+        }
+        details[open] .answer{
+            animation: fadeIn 1s ease; 
+        }
+        @keyframes fadeIn{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <details>
+        <summary>HTML로 아코디언메뉴를 만들어볼 수 있을까요?</summary>
+        <div class="answer">
+            <p>네 맞습니다. 디테일즈 태그와 서머리 태그로 작업할 수 있습니다.</p>
+        </div>
+    </details>
+</body>
+</html>
