@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>탭 메뉴 연습해보기</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+section{
+    width: 50%;
+}
+.tab_menu{
+	position:relative;
+	width:100%;
+	top:10px;
+}
+
+.tab_menu > li{
+    list-style-type: none;
+    
+}
+.tab_menu > li >a{
+	position:absolute;
+	color:black;
+	font-weight:bold;
+	font-size:14px;
+    text-decoration: none;
+    background-color: cadetblue;
+    padding-bottom: 5px;
+    
+}
+.tab_menu > li + li > a{
+	left:100px;
+    
+}
+li.on > .contents{
+	width:100%;
+	height:160px;
+	margin-top:25px;
+	background:#efefef;
+
+}
+.contents{
+	position:absolute;
+	overflow:hidden;
+	height:0;
+}
+</style>
+    </head>
+<!-- 컨텐츠 시작 -->
+<section>
+	<ul class="tab_menu">
+				<li class="on"><a href="#">공지사항</a>
+					<div class="contents">
+					<table cellpadding="5" cellspacing="5" width="100%">
+						<tr>
+							<td>2019년도 상반기 국가기술자격 상시검정 시행공고...</td>
+							<td align="right">2019-05-12</td>
+						</tr>
+						<tr>
+							<td>국가기술자격시험 중앙채점위원 공개모집...</td>
+							<td align="right">2019-05-10</td>
+						</tr>
+						<tr>
+							<td>개인PC 지참 사용강화 조치 알림('19.4.29적용)...</td>
+							<td align="right">2019-05-09</td>
+						</tr>
+						<tr>
+							<td>2019년도 국가기술자격 주요변경(규정신분증 등) 안내...</td>
+							<td align="right">2019-05-07</td>
+						</tr>
+						<tr>
+							<td>2018년 신설 자격종목 실기시험 수시검정 시행공고...</td>
+							<td align="right">2019-05-05</td>
+						</tr>
+						<tr>
+							<td>필기시험 상호면제 및 과목면제 불가 안내...</td>
+							<td align="right"> 2019-05-30</td>
+						</tr>
+					</table>
+					</div>
+				</li>
+				<li><a href="#">갤러리</a>
+					<div class="contents">
+					<table width="100%">
+						<tr width="25%">
+							<td><img src="./웹디 img/gallery1.jpg" width="100%" alt="갤러리1"/></td>
+							<td><img src="./웹디 img/gallery2.jpg" width="100%" alt="갤러리2"/></td>
+							<td><img src="./웹디 img/gallery3.jpg" width="100%" alt="갤러리3"/></td>
+							<td><img src="./웹디 img/gallery4.jpg" width="100%" alt="갤러리4"/></td>
+						</tr>
+					</table>
+					</div>
+				</li>
+			</ul>		
+</section>
+<!-- 컨텐츠 끝 -->
+    <script src="./tab_menu.js">
+/*$(".tab_menu > li > a").click(function(){
+	$(this).parent().addClass("on").siblings().removeClass("on");
+	return false;
+});*/
+	</script>
+    </body>
+</html>
