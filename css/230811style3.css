@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/*헤더영역*/
+header{
+    float: left;
+}
+/*헤더 제외 메인*/
+.mainBox{
+    float: right;
+}

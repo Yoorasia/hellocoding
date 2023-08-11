@@ -1,0 +1,70 @@
+@charset "utf-8";
+/*메뉴 전체 박스*/
+nav{
+    float: right;
+    width: 800px;
+    height: 100%;
+}
+/*메인 메뉴 박스*/
+nav > ul{
+    display: inline;
+}
+
+nav > ul > li{
+    display: inline-block;
+    width: calc(700px / 4);
+    height: 50px;
+    text-align: center;
+    position: relative; /*메인메뉴 아래 가두도록 지정*/
+}
+
+nav > ul > li > a{
+    display: block;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: cadetblue;
+    color: #333;
+    transition: all .5s;
+}
+
+nav ul li:hover > a{
+    text-decoration: underline;
+}
+
+.menu_box{
+    position: absolute;
+    width: 800px;
+    height: 300px;
+    background-color: darkolivegreen;
+    display: none;
+    z-index: 1;
+}
+
+.menu_box > ul{}
+
+.menu_box > li{
+    list-style: none;
+    width: calc(700px / 4);
+    line-height: 40px;
+    vertical-align: top;
+}
+.menu_box > li:hover{
+    background-color: darkkhaki;
+}
+
+.menu_box > li > a{
+    display: block;
+    font-size: 1em;
+    color: #333;
+    line-height: 40px;
+    background-color: darkorange;
+    transition: all .5s;
+}
+
+.menu_box > li:hover > a{
+    color: rgb(255, 255, 255);
+    background-color: darkseagreen;
+    font-weight: bold;
+    transition: all .5s;
+}

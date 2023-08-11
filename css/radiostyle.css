@@ -1,0 +1,50 @@
+*{margin:0; padding:0;}
+ul{padding:0; list-style:none;}
+
+.tabs{
+    display: table;
+    position: relative;
+}
+
+.tabs::after{
+    content: "";
+    overflow:hidden;
+    clear: both;
+}
+.tabs li{
+    display: table-cell;
+}
+
+.tabs li:first-child{}
+
+.tabs label{
+    background-color: blueviolet;
+    width: 200px;
+    height: 40px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: 500;
+    color:#222;
+    text-decoration: none;
+    letter-spacing: -1px ;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+}
+.tabs input{
+    display: none;
+}
+.tabcontents {
+    display: none;
+    text-align: left;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: lightpink;
+    border: #222;
+    position: absolute;
+    top:40px;
+    left: 0;
+    box-sizing: border-box;
+}
+.tabs input:checked ~ label{background-color: aqua;}
+.tabs input:checked ~ .tabcontents{display: block; border: 1px solid #333;}
